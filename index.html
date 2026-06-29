@@ -113,7 +113,7 @@
     }
 
     main {
-      width: min(1280px, calc(100% - 28px));
+      width: min(1920px, calc(100vw - 24px));
       max-width: 100%;
       margin: 18px auto 40px;
       min-width: 0;
@@ -142,7 +142,7 @@
       border-radius: 8px;
       padding: 18px;
       margin: 14px 0;
-      overflow: hidden;
+      overflow: visible;
       max-width: 100%;
       min-width: 0;
       box-shadow: 0 10px 24px rgba(15, 46, 31, 0.06);
@@ -258,32 +258,36 @@
       min-width: 0;
       display: block;
       overflow-x: auto;
-      overflow-y: hidden;
+      overflow-y: auto;
+      max-height: 76vh;
       overscroll-behavior-inline: contain;
       -webkit-overflow-scrolling: touch;
       border: 1px solid var(--line);
       border-radius: 6px;
       background: #fff;
+      scrollbar-gutter: stable;
     }
 
     table {
-      width: 100%;
+      width: max-content;
       border-collapse: collapse;
-      min-width: 920px;
-      table-layout: fixed;
+      min-width: 100%;
+      table-layout: auto;
       background: #fff;
     }
 
     th,
     td {
       border-bottom: 1px solid var(--line);
-      padding: 9px 10px;
+      padding: 7px 8px;
       text-align: left;
       vertical-align: top;
-      font-size: 14px;
-      overflow-wrap: anywhere;
+      font-size: 12.5px;
+      line-height: 1.45;
+      overflow-wrap: break-word;
       word-break: break-word;
-      min-width: 0;
+      min-width: 76px;
+      max-width: 240px;
     }
 
     th {
@@ -291,6 +295,38 @@
       color: #334155;
       font-weight: 650;
       white-space: normal;
+      position: sticky;
+      top: 0;
+      z-index: 3;
+      box-shadow: 0 1px 0 var(--line), 0 4px 10px rgba(15, 46, 31, 0.08);
+    }
+
+    th:nth-child(1),
+    td:nth-child(1) {
+      min-width: 112px;
+      max-width: 140px;
+    }
+
+    th:nth-child(2),
+    td:nth-child(2),
+    th:nth-child(3),
+    td:nth-child(3) {
+      min-width: 128px;
+      max-width: 180px;
+    }
+
+    th:nth-child(18),
+    td:nth-child(18),
+    th:nth-child(19),
+    td:nth-child(19),
+    th:nth-child(20),
+    td:nth-child(20),
+    th:nth-child(22),
+    td:nth-child(22),
+    th:nth-child(23),
+    td:nth-child(23) {
+      min-width: 150px;
+      max-width: 260px;
     }
 
     tr:last-child td {
@@ -308,7 +344,7 @@
     }
 
     footer {
-      width: min(1280px, calc(100% - 28px));
+      width: min(1920px, calc(100vw - 24px));
       margin: 0 auto 36px;
       color: var(--muted);
       font-size: 13px;
@@ -426,8 +462,8 @@
 <section id="status">
       <h2>今日状态</h2>
       <div class="status-grid">
-        <div class="metric"><span>最后更新时间</span><strong>2026-06-29 11:40</strong></div>
-        <div class="metric"><span>模型版本</span><strong>PAGE-WF-20260629-V30</strong></div>
+        <div class="metric"><span>最后更新时间</span><strong>2026-06-29 11:46</strong></div>
+        <div class="metric"><span>模型版本</span><strong>PAGE-WF-20260629-V31</strong></div>
         <div class="metric"><span>基础数据池</span><strong>联赛116807 / 大赛1071 / 赔率214</strong></div>
         <div class="metric"><span>世界杯待预测</span><strong>5场</strong></div>
         <div class="metric"><span>北单候选</span><strong>15场</strong></div>
