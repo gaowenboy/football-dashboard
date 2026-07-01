@@ -462,7 +462,7 @@
 <section id="status">
       <h2>今日状态</h2>
       <div class="status-grid">
-        <div class="metric"><span>最后更新时间</span><strong>2026-07-01 14:23</strong></div>
+        <div class="metric"><span>最后更新时间</span><strong>2026-07-01 14:27</strong></div>
         <div class="metric"><span>基础数据池</span><strong>联赛116807 / 大赛核心2668 / 世界杯赔率264 / 扩展17421</strong></div>
         <div class="metric"><span>体彩待售预测</span><strong>9场</strong></div>
         <div class="metric"><span>北单待售预测</span><strong>0场</strong></div>
@@ -581,13 +581,40 @@
       target.innerHTML = `<div class="table-wrap"><table><thead><tr><th>北京时间</th><th>比赛</th><th>实际比分</th><th>普通结果</th><th>赛前方向复盘</th><th>让球/双选复盘</th><th>比分偏差</th><th>今日权重修正</th></tr></thead><tbody>${body}</tbody></table></div>`;
     }
 
-    function refreshApiUrl(full = false) {
-      return full ? '/api/refresh?full=1' : '/api/refresh';
+    const DASHBOARD_REFRESH_ORIGINS = [
+      window.location.origin,
+      'http://192.168.1.21:8765',
+      'http://127.0.0.1:8765',
+      'http://localhost:8765'
+    ];
+
+    function uniqueRefreshOrigins() {
+      const seen = new Set();
+      return DASHBOARD_REFRESH_ORIGINS
+        .filter(Boolean)
+        .map((origin) => String(origin).replace(/\/$/, ''))
+        .filter((origin) => {
+          if (seen.has(origin)) return false;
+          seen.add(origin);
+          return true;
+        });
+    }
+
+    function refreshApiUrl(origin, full = false) {
+      return `${origin}/api/refresh${full ? '?full=1' : ''}`;
+    }
+
+    function localRefreshEntry(full = false) {
+      return `http://192.168.1.21:8765/?auto_refresh=1${full ? '&full=1' : ''}`;
     }
 
     async function callRefreshApi(url) {
       const sep = url.includes('?') ? '&' : '?';
-      const res = await fetch(`${url}${sep}_=${Date.now()}`, { method: 'POST', cache: 'no-store' });
+      const res = await fetch(`${url}${sep}_=${Date.now()}`, {
+        method: 'POST',
+        cache: 'no-store',
+        mode: 'cors'
+      });
       const payload = await res.json().catch(() => ({}));
       if (!res.ok || !payload.ok) {
         const err = new Error(payload.message || `HTTP ${res.status}`);
@@ -599,9 +626,9 @@
     }
 
     async function refreshWithFallback(full = false) {
-      return callRefreshApi(refreshApiUrl(full));
       const errors = [];
-      for (const url of [refreshApiUrl(full)]) {
+      for (const origin of uniqueRefreshOrigins()) {
+        const url = refreshApiUrl(origin, full);
         try {
           return await callRefreshApi(url);
         } catch (err) {
@@ -611,7 +638,9 @@
           }
         }
       }
-      throw new Error(errors.slice(-3).join('；') || '本地刷新接口不可用');
+      const err = new Error(errors.slice(-4).join('；') || '本地刷新接口不可用');
+      err.localEntry = localRefreshEntry(full);
+      throw err;
     }
 
     function bindRefreshButton(buttonId, full = false) {
@@ -634,9 +663,15 @@
       } catch (err) {
         const message = err?.message || err;
         if (status) {
-          status.textContent = String(message).includes('正在执行')
-            ? `刷新正在执行：${message}。稍后再点刷新即可。`
-            : `刷新失败：${message}。请确认 8765 页面服务正在运行，然后重新打开或刷新页面。`;
+          if (String(message).includes('正在执行')) {
+            status.textContent = `刷新正在执行：${message}。稍后再点刷新即可。`;
+          } else {
+            const entry = err?.localEntry || localRefreshEntry(full);
+            status.innerHTML = `外网页面未能直接调用本机刷新接口，已准备切换到内网刷新入口：<a href="${entry}">打开并自动刷新</a>`;
+            setTimeout(() => {
+              window.location.href = entry;
+            }, 900);
+          }
           return;
         }
         if (status) status.textContent = String(message).includes('正在执行')
@@ -648,8 +683,17 @@
       });
     }
 
+    function runAutoRefreshFromQuery() {
+      const params = new URLSearchParams(window.location.search);
+      if (params.get('auto_refresh') !== '1') return;
+      const full = params.get('full') === '1';
+      const button = document.getElementById(full ? 'deep-refresh' : 'manual-refresh');
+      setTimeout(() => button?.click(), 400);
+    }
+
     bindRefreshButton('manual-refresh', false);
     bindRefreshButton('deep-refresh', true);
+    runAutoRefreshFromQuery();
   </script>
 </body>
 </html>
