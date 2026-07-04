@@ -462,7 +462,7 @@
 <section id="status">
       <h2>今日状态</h2>
       <div class="status-grid">
-        <div class="metric"><span>最后更新时间</span><strong>2026-07-04 10:02</strong></div>
+        <div class="metric"><span>最后更新时间</span><strong>2026-07-04 10:07</strong></div>
         <div class="metric"><span>基础数据池</span><strong>联赛116807 / 大赛核心2668 / 扩展17430</strong></div>
         <div class="metric"><span>世界杯历史库</span><strong>正赛552 / 淘汰赛144 / 赔率半场264</strong></div>
         <div class="metric"><span>体彩待售预测</span><strong>14场</strong></div>
@@ -724,6 +724,8 @@
         if (status) {
           if (String(message).includes('正在执行')) {
             status.textContent = `刷新正在执行：${message}。稍后再点刷新即可。`;
+          } else if (isLocalDashboardOrigin()) {
+            status.textContent = `刷新失败：${message}。本机服务已连接，但刷新脚本执行失败，请查看错误信息后再试。`;
           } else {
             const entry = err?.localEntry || localRefreshEntry(full, true);
             status.innerHTML = `刷新接口暂时不可用，已准备重新进入内网刷新入口：<a href="${entry}">打开并自动刷新</a>`;
