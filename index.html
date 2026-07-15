@@ -459,8 +459,8 @@
       }
     }
   </style>
-<meta name="dashboard-build-id" content="20260716075646304309">
-  <meta name="dashboard-generated-at" content="2026-07-16T07:56:46+08:00">
+<meta name="dashboard-build-id" content="20260716075908356771">
+  <meta name="dashboard-generated-at" content="2026-07-16T07:59:08+08:00">
   <meta name="dashboard-model-version" content="V1_CHAMPION_UNIFIED_V41">
   <meta name="dashboard-ruleset-version" content="UNIFIED_RULESET_1.2.0_COMPAT">
   <meta name="dashboard-build-status" content="ok">
@@ -470,10 +470,12 @@
 <body>
   <header>
     <h1>今日足球预测仪表盘</h1>
-    <p>世界杯主线 + 北京体彩/北京单场娱乐候选。公开页只检查已发布版本，不执行数据抓取或建模。</p>
+    <p>世界杯主线 + 北京体彩/北京单场娱乐候选。后台自动更新赛果和待售场次；公开页每10分钟检查一次已发布新版本。</p>
     <div class="refresh-bar">
       <button class="refresh-button" id="manual-refresh" type="button">检查已发布更新</button>
+      <button class="refresh-button secondary" id="auto-refresh-toggle" type="button" aria-pressed="true">自动刷新：开</button>
       <span class="refresh-hint" id="refresh-status">只检查已经发布的新版本，不调用本机或局域网服务。</span>
+      <span class="auto-refresh-status" id="auto-refresh-status">自动刷新准备中...</span>
     </div>
   </header>
 
@@ -488,7 +490,7 @@
 <section id="status">
       <h2>今日状态</h2>
       <div class="status-grid">
-        <div class="metric"><span>更新时间</span><strong data-dashboard-generated>2026-07-16T07:56:46+08:00</strong></div>
+        <div class="metric"><span>更新时间</span><strong data-dashboard-generated>2026-07-16T07:59:08+08:00</strong></div>
         <div class="metric"><span>比赛待售情况</span><strong data-sale-status data-sporttery-count="7" data-beijing-count="17">体彩 7场｜北单 17场</strong></div>
       </div>
     </section>
@@ -506,7 +508,38 @@
   <script>
     const currentBuildId = document.querySelector('meta[name="dashboard-build-id"]')?.content || '';
     const statusNode = document.getElementById('refresh-status');
+    const autoToggleNode = document.getElementById('auto-refresh-toggle');
+    const autoStatusNode = document.getElementById('auto-refresh-status');
+    const publicAutoUpdateKey = 'football-dashboard-public-auto-update';
+    const publicAutoUpdateIntervalMs = 600000;
     let lastActivityAt = Date.now();
+
+    function publicAutoUpdateEnabled() {
+      try {
+        return localStorage.getItem(publicAutoUpdateKey) !== '0';
+      } catch (_) {
+        return true;
+      }
+    }
+
+    function setPublicAutoUpdateEnabled(enabled) {
+      try {
+        localStorage.setItem(publicAutoUpdateKey, enabled ? '1' : '0');
+      } catch (_) {}
+      renderPublicAutoUpdateState();
+    }
+
+    function renderPublicAutoUpdateState(extra = '') {
+      const enabled = publicAutoUpdateEnabled();
+      if (autoToggleNode) {
+        autoToggleNode.textContent = enabled ? '自动更新：开' : '自动更新：关';
+        autoToggleNode.setAttribute('aria-pressed', enabled ? 'true' : 'false');
+        autoToggleNode.classList.toggle('is-off', !enabled);
+      }
+      if (autoStatusNode) {
+        autoStatusNode.textContent = extra || (enabled ? '每10分钟自动检查已发布新版本' : '自动检查已暂停');
+      }
+    }
 
     function rememberScroll() {
       sessionStorage.setItem('football-dashboard-public-scroll', JSON.stringify({y: window.scrollY || 0, at: Date.now()}));
@@ -524,6 +557,7 @@
 
     async function checkPublishedBuild(manual = false) {
       if (manual && statusNode) statusNode.textContent = '正在检查已发布更新...';
+      if (autoStatusNode) autoStatusNode.textContent = manual ? '正在手动检查...' : '正在自动检查...';
       try {
         const response = await fetch(`build-meta.json?_=${Date.now()}`, {cache: 'no-store'});
         if (!response.ok) throw new Error(`HTTP ${response.status}`);
@@ -543,15 +577,28 @@
           return;
         }
         if (statusNode) statusNode.textContent = '当前已是最新发布版本。';
+        if (autoStatusNode) autoStatusNode.textContent = `最近检查：${new Date().toLocaleTimeString('zh-CN', {hour12: false})}`;
       } catch (error) {
         if (statusNode) statusNode.textContent = `检查发布版本失败：${error.message || error}`;
+        if (autoStatusNode) autoStatusNode.textContent = '自动检查失败，10分钟后重试';
       }
     }
 
     document.getElementById('manual-refresh')?.addEventListener('click', () => checkPublishedBuild(true));
+    autoToggleNode?.addEventListener('click', () => {
+      const enabled = !publicAutoUpdateEnabled();
+      setPublicAutoUpdateEnabled(enabled);
+      if (enabled) checkPublishedBuild(false);
+    });
     ['scroll', 'click', 'keydown', 'touchstart'].forEach((name) => window.addEventListener(name, () => { lastActivityAt = Date.now(); }, {passive: true}));
     restoreScroll();
-    window.setInterval(() => checkPublishedBuild(false), 600000);
+    renderPublicAutoUpdateState();
+    window.setTimeout(() => {
+      if (publicAutoUpdateEnabled()) checkPublishedBuild(false);
+    }, 10000);
+    window.setInterval(() => {
+      if (publicAutoUpdateEnabled()) checkPublishedBuild(false);
+    }, publicAutoUpdateIntervalMs);
   </script>
 </body>
 </html>
