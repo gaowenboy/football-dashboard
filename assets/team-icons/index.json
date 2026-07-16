@@ -1,0 +1,341 @@
+{
+  "version": 1,
+  "teams": {
+    "FK萨拉热窝": {
+      "kind": "crest",
+      "path": "assets/team-icons/6701a8c9417f9a5b.png",
+      "source": "TheSportsDB",
+      "resolved_name": "FK Sarajevo",
+      "source_url": "https://r2.thesportsdb.com/images/media/team/badge/znka271579113347.png",
+      "updated_at": "2026-07-16T04:21:01+00:00"
+    },
+    "亚特兰特": {
+      "kind": "crest",
+      "path": "assets/team-icons/66d1dc60efac8479.png",
+      "source": "TheSportsDB",
+      "resolved_name": "Atlante",
+      "source_url": "https://r2.thesportsdb.com/images/media/team/badge/wcf2r51754018201.png",
+      "updated_at": "2026-07-16T04:21:03+00:00"
+    },
+    "伏伊伏丁": {
+      "kind": "crest",
+      "path": "assets/team-icons/5804f4fe63d04b2e.png",
+      "source": "TheSportsDB",
+      "resolved_name": "Vojvodina",
+      "source_url": "https://r2.thesportsdb.com/images/media/team/badge/adh59u1703173053.png",
+      "updated_at": "2026-07-16T04:21:04+00:00"
+    },
+    "内卡萨": {
+      "kind": "crest",
+      "path": "assets/team-icons/950b9ba8b7888f67.png",
+      "source": "TheSportsDB",
+      "resolved_name": "Necaxa",
+      "source_url": "https://r2.thesportsdb.com/images/media/team/badge/tqdk9e1779772432.png",
+      "updated_at": "2026-07-16T04:21:05+00:00"
+    },
+    "博卡青年": {
+      "kind": "crest",
+      "path": "assets/team-icons/ec291f80e0b3591f.png",
+      "source": "TheSportsDB",
+      "resolved_name": "Boca Juniors",
+      "source_url": "https://r2.thesportsdb.com/images/media/team/badge/bm7krb1775741582.png",
+      "updated_at": "2026-07-16T04:21:07+00:00"
+    },
+    "博塔弗戈": {
+      "kind": "crest",
+      "path": "assets/team-icons/1c161a36464585e0.png",
+      "source": "TheSportsDB",
+      "resolved_name": "Botafogo",
+      "source_url": "https://r2.thesportsdb.com/images/media/team/badge/bs5mbw1733004596.png",
+      "updated_at": "2026-07-16T04:21:09+00:00"
+    },
+    "卡拉巴赫": {
+      "kind": "crest",
+      "path": "assets/team-icons/c4a5a961137da0f6.png",
+      "source": "TheSportsDB",
+      "resolved_name": "Qarabağ",
+      "source_url": "https://r2.thesportsdb.com/images/media/team/badge/f9h2by1725001244.png",
+      "updated_at": "2026-07-16T04:21:10+00:00"
+    },
+    "国际图尔库": {
+      "kind": "crest",
+      "path": "assets/team-icons/8857ac6f4af96f11.png",
+      "source": "TheSportsDB",
+      "resolved_name": "Inter Turku",
+      "source_url": "https://r2.thesportsdb.com/images/media/team/badge/xoi4oo1738193128.png",
+      "updated_at": "2026-07-16T04:21:12+00:00"
+    },
+    "圣路易斯城": {
+      "kind": "crest",
+      "path": "assets/team-icons/93b24da36781a74d.png",
+      "source": "TheSportsDB",
+      "resolved_name": "Louisville City",
+      "source_url": "https://r2.thesportsdb.com/images/media/team/badge/v0wen91771603471.png",
+      "updated_at": "2026-07-16T04:21:14+00:00"
+    },
+    "堪萨斯城体育": {
+      "kind": "crest",
+      "path": "assets/team-icons/858d9ec321e3e1bc.png",
+      "source": "TheSportsDB",
+      "resolved_name": "Sporting Kansas City",
+      "source_url": "https://r2.thesportsdb.com/images/media/team/badge/tqupxw1473536504.png",
+      "updated_at": "2026-07-16T04:21:15+00:00"
+    },
+    "多伦多FC": {
+      "kind": "crest",
+      "path": "assets/team-icons/1ae01b4682b19ce1.png",
+      "source": "TheSportsDB",
+      "resolved_name": "Toronto FC",
+      "source_url": "https://r2.thesportsdb.com/images/media/team/badge/rsxyrr1473536512.png",
+      "updated_at": "2026-07-16T04:21:17+00:00"
+    },
+    "奥勒松": {
+      "kind": "crest",
+      "path": "assets/team-icons/3beac44942e4df6a.png",
+      "source": "TheSportsDB",
+      "resolved_name": "Aalesund",
+      "source_url": "https://r2.thesportsdb.com/images/media/team/badge/s1br7q1602448285.png",
+      "updated_at": "2026-07-16T04:21:18+00:00"
+    },
+    "巴西雷加塔斯": {
+      "kind": "crest",
+      "path": "assets/team-icons/a926343cb99196db.png",
+      "source": "TheSportsDB",
+      "resolved_name": "CRB",
+      "source_url": "https://r2.thesportsdb.com/images/media/team/badge/vpypuq1472069179.png",
+      "updated_at": "2026-07-16T04:21:20+00:00"
+    },
+    "德里城": {
+      "kind": "crest",
+      "path": "assets/team-icons/5254c380b89e3544.png",
+      "source": "TheSportsDB",
+      "resolved_name": "Derry City",
+      "source_url": "https://r2.thesportsdb.com/images/media/team/badge/i5u42j1602256316.png",
+      "updated_at": "2026-07-16T04:21:21+00:00"
+    },
+    "扎布热矿工": {
+      "kind": "crest",
+      "path": "assets/team-icons/3f2c3d5fec2f7970.png",
+      "source": "TheSportsDB",
+      "resolved_name": "Górnik Zabrze",
+      "source_url": "https://r2.thesportsdb.com/images/media/team/badge/fk1fam1767928408.png",
+      "updated_at": "2026-07-16T04:21:23+00:00"
+    },
+    "斯海杜克": {
+      "kind": "crest",
+      "path": "assets/team-icons/3a4a77660f7d0ed3.png",
+      "source": "TheSportsDB",
+      "resolved_name": "Hajduk Split",
+      "source_url": "https://r2.thesportsdb.com/images/media/team/badge/23mvtk1579955412.png",
+      "updated_at": "2026-07-16T04:21:24+00:00"
+    },
+    "日利纳": {
+      "kind": "crest",
+      "path": "assets/team-icons/d9a1fef4cf42f290.png",
+      "source": "TheSportsDB",
+      "resolved_name": "Žilina",
+      "source_url": "https://r2.thesportsdb.com/images/media/team/badge/rwsikr1627419286.png",
+      "updated_at": "2026-07-16T04:21:26+00:00"
+    },
+    "桑托斯": {
+      "kind": "crest",
+      "path": "assets/team-icons/43b3632cb71fcd89.png",
+      "source": "TheSportsDB",
+      "resolved_name": "Santos",
+      "source_url": "https://r2.thesportsdb.com/images/media/team/badge/j8xk9g1679447486.png",
+      "updated_at": "2026-07-16T04:21:27+00:00"
+    },
+    "法国": {
+      "kind": "flag",
+      "path": "assets/team-icons/d4ac60484d7e82eb.png",
+      "source": "FlagCDN",
+      "resolved_name": "法国",
+      "source_url": "https://flagcdn.com/w160/fr.png",
+      "updated_at": "2026-07-16T04:21:28+00:00"
+    },
+    "波兹南莱赫": {
+      "kind": "crest",
+      "path": "assets/team-icons/9e33358e161a8190.png",
+      "source": "TheSportsDB",
+      "resolved_name": "Lech Poznań",
+      "source_url": "https://r2.thesportsdb.com/images/media/team/badge/8zfxyx1685597440.png",
+      "updated_at": "2026-07-16T04:21:29+00:00"
+    },
+    "波希米亚人": {
+      "kind": "crest",
+      "path": "assets/team-icons/a4fcc70aed1b546d.png",
+      "source": "TheSportsDB",
+      "resolved_name": "Bohemians",
+      "source_url": "https://r2.thesportsdb.com/images/media/team/badge/78i24h1734625752.png",
+      "updated_at": "2026-07-16T04:21:31+00:00"
+    },
+    "波特兰伐木者": {
+      "kind": "crest",
+      "path": "assets/team-icons/bd5c734376940e77.png",
+      "source": "TheSportsDB",
+      "resolved_name": "Portland Timbers",
+      "source_url": "https://r2.thesportsdb.com/images/media/team/badge/skm30j1557953559.png",
+      "updated_at": "2026-07-16T04:21:33+00:00"
+    },
+    "温哥华白浪": {
+      "kind": "crest",
+      "path": "assets/team-icons/0e023cad29f2bff8.png",
+      "source": "TheSportsDB",
+      "resolved_name": "Vancouver Whitecaps",
+      "source_url": "https://r2.thesportsdb.com/images/media/team/badge/tpwxpy1473536521.png",
+      "updated_at": "2026-07-16T04:21:34+00:00"
+    },
+    "瓦勒伦加": {
+      "kind": "crest",
+      "path": "assets/team-icons/09a43265aba2f94f.png",
+      "source": "TheSportsDB",
+      "resolved_name": "Vålerenga",
+      "source_url": "https://r2.thesportsdb.com/images/media/team/badge/e8c63s1764643725.png",
+      "updated_at": "2026-07-16T04:21:35+00:00"
+    },
+    "瓦斯科达伽马": {
+      "kind": "crest",
+      "path": "assets/team-icons/169720d546033163.png",
+      "source": "TheSportsDB",
+      "resolved_name": "Vasco da Gama",
+      "source_url": "https://r2.thesportsdb.com/images/media/team/badge/ynqlxo1630521109.png",
+      "updated_at": "2026-07-16T04:21:37+00:00"
+    },
+    "竞技俱乐部": {
+      "kind": "crest",
+      "path": "assets/team-icons/63ab9ffbf1765f2f.png",
+      "source": "TheSportsDB",
+      "resolved_name": "Racing Club",
+      "source_url": "https://r2.thesportsdb.com/images/media/team/badge/vi4mu41695734959.png",
+      "updated_at": "2026-07-16T04:21:39+00:00"
+    },
+    "索陆军": {
+      "kind": "crest",
+      "path": "assets/team-icons/0123e543338ddb47.png",
+      "source": "TheSportsDB",
+      "resolved_name": "CSKA Sofia",
+      "source_url": "https://r2.thesportsdb.com/images/media/team/badge/e9tykm1752947048.png",
+      "updated_at": "2026-07-16T04:21:40+00:00"
+    },
+    "索非亚中央陆军": {
+      "kind": "crest",
+      "path": "assets/team-icons/a59de8181c29c15d.png",
+      "source": "TheSportsDB",
+      "resolved_name": "CSKA Sofia",
+      "source_url": "https://r2.thesportsdb.com/images/media/team/badge/e9tykm1752947048.png",
+      "updated_at": "2026-07-16T04:21:42+00:00"
+    },
+    "累西腓航海": {
+      "kind": "crest",
+      "path": "assets/team-icons/5a5ae8e0b6f76d3a.png",
+      "source": "TheSportsDB",
+      "resolved_name": "Náutico",
+      "source_url": "https://r2.thesportsdb.com/images/media/team/badge/wywuwv1464886832.png",
+      "updated_at": "2026-07-16T04:21:43+00:00"
+    },
+    "维多利亚": {
+      "kind": "crest",
+      "path": "assets/team-icons/9f9a07b3ab4fd3ef.png",
+      "source": "TheSportsDB",
+      "resolved_name": "Vitória",
+      "source_url": "https://r2.thesportsdb.com/images/media/team/badge/tysrrx1473538156.png",
+      "updated_at": "2026-07-16T04:21:44+00:00"
+    },
+    "英格兰": {
+      "kind": "flag",
+      "path": "assets/team-icons/35953137bb9ade7e.png",
+      "source": "FlagCDN",
+      "resolved_name": "英格兰",
+      "source_url": "https://flagcdn.com/w160/gb-eng.png",
+      "updated_at": "2026-07-16T04:21:46+00:00"
+    },
+    "西班牙": {
+      "kind": "flag",
+      "path": "assets/team-icons/b332b9e3935caebb.png",
+      "source": "FlagCDN",
+      "resolved_name": "西班牙",
+      "source_url": "https://flagcdn.com/w160/es.png",
+      "updated_at": "2026-07-16T04:21:49+00:00"
+    },
+    "阿根廷": {
+      "kind": "flag",
+      "path": "assets/team-icons/c3b039f0a8a06060.png",
+      "source": "FlagCDN",
+      "resolved_name": "阿根廷",
+      "source_url": "https://flagcdn.com/w160/ar.png",
+      "updated_at": "2026-07-16T04:21:51+00:00"
+    },
+    "维斯特里": {
+      "kind": "crest",
+      "path": "assets/team-icons/00be2f9df2b6648a.png",
+      "source": "TheSportsDB",
+      "resolved_name": "Vestri",
+      "source_url": "https://r2.thesportsdb.com/images/media/team/badge/27f6gb1614288091.png",
+      "updated_at": "2026-07-16T04:25:08+00:00"
+    },
+    "老虎大学": {
+      "kind": "crest",
+      "path": "assets/team-icons/d1bb46c72165f90f.png",
+      "source": "TheSportsDB",
+      "resolved_name": "Tigres UANL",
+      "source_url": "https://r2.thesportsdb.com/images/media/team/badge/lh80fx1701423708.png",
+      "updated_at": "2026-07-16T04:25:10+00:00"
+    },
+    "芝加哥火焰": {
+      "kind": "crest",
+      "path": "assets/team-icons/538e1256d364a36d.png",
+      "source": "TheSportsDB",
+      "resolved_name": "Chicago Fire",
+      "source_url": "https://r2.thesportsdb.com/images/media/team/badge/8xuc781639493166.png",
+      "updated_at": "2026-07-16T04:25:11+00:00"
+    },
+    "萨米恩托": {
+      "kind": "crest",
+      "path": "assets/team-icons/15a6d7562b905697.png",
+      "source": "TheSportsDB",
+      "resolved_name": "Sarmiento",
+      "source_url": "https://r2.thesportsdb.com/images/media/team/badge/xxofu71677634191.png",
+      "updated_at": "2026-07-16T04:25:12+00:00"
+    },
+    "蒂华纳": {
+      "kind": "crest",
+      "path": "assets/team-icons/149d3d555504d567.png",
+      "source": "TheSportsDB",
+      "resolved_name": "Tijuana",
+      "source_url": "https://r2.thesportsdb.com/images/media/team/badge/b0mky81779772352.png",
+      "updated_at": "2026-07-16T04:25:14+00:00"
+    },
+    "蒙特利尔": {
+      "kind": "crest",
+      "path": "assets/team-icons/9d1708eeb11ff3be.png",
+      "source": "TheSportsDB",
+      "resolved_name": "CF Montréal",
+      "source_url": "https://r2.thesportsdb.com/images/media/team/badge/livdl31679344925.png",
+      "updated_at": "2026-07-16T04:25:15+00:00"
+    },
+    "西雅图海湾人": {
+      "kind": "crest",
+      "path": "assets/team-icons/552f8557127f5046.png",
+      "source": "TheSportsDB",
+      "resolved_name": "Seattle Sounders",
+      "source_url": "https://r2.thesportsdb.com/images/media/team/badge/2dy5cx1706711036.png",
+      "updated_at": "2026-07-16T04:25:16+00:00"
+    },
+    "费伦茨": {
+      "kind": "crest",
+      "path": "assets/team-icons/fc5db3cc97330eef.png",
+      "source": "TheSportsDB",
+      "resolved_name": "Ferencváros",
+      "source_url": "https://r2.thesportsdb.com/images/media/team/badge/wk17od1688115265.png",
+      "updated_at": "2026-07-16T04:25:18+00:00"
+    },
+    "防卫与正义": {
+      "kind": "crest",
+      "path": "assets/team-icons/29d673476b64e28c.png",
+      "source": "TheSportsDB",
+      "resolved_name": "Defensa y Justicia",
+      "source_url": "https://r2.thesportsdb.com/images/media/team/badge/3guvlh1775778978.png",
+      "updated_at": "2026-07-16T04:25:19+00:00"
+    }
+  }
+}
