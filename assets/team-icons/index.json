@@ -336,6 +336,14 @@
       "resolved_name": "Defensa y Justicia",
       "source_url": "https://r2.thesportsdb.com/images/media/team/badge/3guvlh1775778978.png",
       "updated_at": "2026-07-16T04:25:19+00:00"
+    },
+    "墨西哥": {
+      "kind": "flag",
+      "path": "assets/team-icons/c48a80ccdf02108c.png",
+      "source": "FlagCDN",
+      "resolved_name": "墨西哥",
+      "source_url": "https://flagcdn.com/w160/mx.png",
+      "updated_at": "2026-07-17T03:00:11+00:00"
     }
   }
 }
