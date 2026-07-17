@@ -896,6 +896,118 @@
       "resolved_name": "Gimcheon Sangmu",
       "source_url": "https://r2.thesportsdb.com/images/media/team/badge/g4cjyk1609536787.png",
       "updated_at": "2026-07-17T05:23:05+00:00"
+    },
+    "浦项制铁": {
+      "kind": "crest",
+      "path": "assets/team-icons/2aeb2bb7c0a910a9.png",
+      "source": "TheSportsDB",
+      "resolved_name": "Pohang Steelers",
+      "source_url": "https://r2.thesportsdb.com/images/media/team/badge/63jst01769097748.png",
+      "updated_at": "2026-07-17T05:56:34+00:00"
+    },
+    "仁川联": {
+      "kind": "crest",
+      "path": "assets/team-icons/4800be6d226fa9cb.png",
+      "source": "TheSportsDB",
+      "resolved_name": "Incheon United",
+      "source_url": "https://r2.thesportsdb.com/images/media/team/badge/2no9nq1579473100.png",
+      "updated_at": "2026-07-17T05:56:36+00:00"
+    },
+    "全北现代": {
+      "kind": "crest",
+      "path": "assets/team-icons/3187b8b984749761.png",
+      "source": "TheSportsDB",
+      "resolved_name": "Jeonbuk Hyundai Motors",
+      "source_url": "https://r2.thesportsdb.com/images/media/team/badge/8jif3b1747853225.png",
+      "updated_at": "2026-07-17T05:56:38+00:00"
+    },
+    "普马斯": {
+      "kind": "crest",
+      "path": "assets/team-icons/cfb88e1f64b88e4a.png",
+      "source": "TheSportsDB",
+      "resolved_name": "Pumas UNAM",
+      "source_url": "https://r2.thesportsdb.com/images/media/team/badge/o01nvl1695734937.png",
+      "updated_at": "2026-07-17T05:56:40+00:00"
+    },
+    "帕丘卡": {
+      "kind": "crest",
+      "path": "assets/team-icons/20e557b359ee3d03.png",
+      "source": "TheSportsDB",
+      "resolved_name": "Pachuca",
+      "source_url": "https://r2.thesportsdb.com/images/media/team/badge/k9duyw1747334895.png",
+      "updated_at": "2026-07-17T05:56:42+00:00"
+    },
+    "蒙特雷": {
+      "kind": "crest",
+      "path": "assets/team-icons/53f885390e3d868c.png",
+      "source": "TheSportsDB",
+      "resolved_name": "Monterrey",
+      "source_url": "https://r2.thesportsdb.com/images/media/team/badge/yglj911721542561.png",
+      "updated_at": "2026-07-17T05:56:43+00:00"
+    },
+    "桑托斯拉古纳": {
+      "kind": "crest",
+      "path": "assets/team-icons/7529726d8c0d2605.png",
+      "source": "TheSportsDB",
+      "resolved_name": "Santos Laguna",
+      "source_url": "https://r2.thesportsdb.com/images/media/team/badge/kg9gzh1779771734.png",
+      "updated_at": "2026-07-17T05:56:45+00:00"
+    },
+    "瓜达拉哈拉": {
+      "kind": "crest",
+      "path": "assets/team-icons/b230a6e63100f8fa.png",
+      "source": "TheSportsDB",
+      "resolved_name": "Guadalajara",
+      "source_url": "https://r2.thesportsdb.com/images/media/team/badge/qt2hk81757606691.png",
+      "updated_at": "2026-07-17T05:56:47+00:00"
+    },
+    "托卢卡": {
+      "kind": "crest",
+      "path": "assets/team-icons/4847244f1ba7c715.png",
+      "source": "TheSportsDB",
+      "resolved_name": "Toluca",
+      "source_url": "https://r2.thesportsdb.com/images/media/team/badge/y64wy91523913186.png",
+      "updated_at": "2026-07-17T05:56:48+00:00"
+    },
+    "克雷塔罗": {
+      "kind": "crest",
+      "path": "assets/team-icons/cbb942d28919409e.png",
+      "source": "TheSportsDB",
+      "resolved_name": "Querétaro",
+      "source_url": "https://r2.thesportsdb.com/images/media/team/badge/024n481781543211.png",
+      "updated_at": "2026-07-17T05:56:50+00:00"
+    },
+    "墨西哥美洲": {
+      "kind": "crest",
+      "path": "assets/team-icons/bb6c050001245bc1.png",
+      "source": "TheSportsDB",
+      "resolved_name": "América",
+      "source_url": "https://r2.thesportsdb.com/images/media/team/badge/amy1xs1581857392.png",
+      "updated_at": "2026-07-17T05:56:52+00:00"
+    },
+    "光州FC": {
+      "kind": "crest",
+      "path": "assets/team-icons/4aaf7202ce70a635.png",
+      "source": "TheSportsDB",
+      "resolved_name": "Gwangju FC",
+      "source_url": "https://r2.thesportsdb.com/images/media/team/badge/uuzr4x1579473084.png",
+      "updated_at": "2026-07-17T05:56:54+00:00"
+    },
+    "FC首尔": {
+      "kind": "crest",
+      "path": "assets/team-icons/358984d6400fa28d.png",
+      "source": "TheSportsDB",
+      "resolved_name": "FC Seoul",
+      "source_url": "https://r2.thesportsdb.com/images/media/team/badge/31z1zf1579473186.png",
+      "updated_at": "2026-07-17T05:56:55+00:00"
+    },
+    "首尔FC": {
+      "kind": "crest",
+      "path": "assets/team-icons/3c827af56a6d2a79.png",
+      "source": "TheSportsDB",
+      "resolved_name": "FC Seoul",
+      "source_url": "https://r2.thesportsdb.com/images/media/team/badge/31z1zf1579473186.png",
+      "updated_at": "2026-07-17T05:56:57+00:00"
     }
   }
 }
