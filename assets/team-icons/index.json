@@ -624,6 +624,278 @@
       "resolved_name": "Chapecoense",
       "source_url": "https://r2.thesportsdb.com/images/media/team/badge/wy0e1i1765900601.png",
       "updated_at": "2026-07-17T05:13:17+00:00"
+    },
+    "弗鲁米嫩塞": {
+      "kind": "crest",
+      "path": "assets/team-icons/a7177a799bc83dec.png",
+      "source": "TheSportsDB",
+      "resolved_name": "Fluminense",
+      "source_url": "https://r2.thesportsdb.com/images/media/team/badge/stvvwp1473538082.png",
+      "updated_at": "2026-07-17T05:22:17+00:00"
+    },
+    "布拉干蒂诺红牛": {
+      "kind": "crest",
+      "path": "assets/team-icons/b6f308c5750ff28d.png",
+      "source": "TheSportsDB",
+      "resolved_name": "Bragantino",
+      "source_url": "https://r2.thesportsdb.com/images/media/team/badge/2p7tl41701423595.png",
+      "updated_at": "2026-07-17T05:22:19+00:00"
+    },
+    "弗鲁米嫩": {
+      "kind": "crest",
+      "path": "assets/team-icons/6c1828e1d8dcc314.png",
+      "source": "TheSportsDB",
+      "resolved_name": "Fluminense",
+      "source_url": "https://r2.thesportsdb.com/images/media/team/badge/stvvwp1473538082.png",
+      "updated_at": "2026-07-17T05:22:20+00:00"
+    },
+    "布拉干RB": {
+      "kind": "crest",
+      "path": "assets/team-icons/4d3abb0a8b9f0f20.png",
+      "source": "TheSportsDB",
+      "resolved_name": "Bragantino",
+      "source_url": "https://r2.thesportsdb.com/images/media/team/badge/2p7tl41701423595.png",
+      "updated_at": "2026-07-17T05:22:21+00:00"
+    },
+    "米拉索尔": {
+      "kind": "crest",
+      "path": "assets/team-icons/6f811510cc4444da.png",
+      "source": "TheSportsDB",
+      "resolved_name": "Mirassol",
+      "source_url": "https://r2.thesportsdb.com/images/media/team/badge/pw8uo11765900737.png",
+      "updated_at": "2026-07-17T05:22:23+00:00"
+    },
+    "格雷米奥": {
+      "kind": "crest",
+      "path": "assets/team-icons/5418fc16ff9c6193.png",
+      "source": "TheSportsDB",
+      "resolved_name": "Grêmio",
+      "source_url": "https://r2.thesportsdb.com/images/media/team/badge/uvpwyt1473538089.png",
+      "updated_at": "2026-07-17T05:22:24+00:00"
+    },
+    "隆德里纳": {
+      "kind": "crest",
+      "path": "assets/team-icons/4bd1cbe6709dd532.png",
+      "source": "TheSportsDB",
+      "resolved_name": "Londrina",
+      "source_url": "https://r2.thesportsdb.com/images/media/team/badge/xp2z9j1740846583.png",
+      "updated_at": "2026-07-17T05:22:26+00:00"
+    },
+    "博塔弗戈SP": {
+      "kind": "crest",
+      "path": "assets/team-icons/aa30d7ced837a912.png",
+      "source": "TheSportsDB",
+      "resolved_name": "Botafogo",
+      "source_url": "https://r2.thesportsdb.com/images/media/team/badge/bs5mbw1733004596.png",
+      "updated_at": "2026-07-17T05:22:28+00:00"
+    },
+    "福塔莱萨": {
+      "kind": "crest",
+      "path": "assets/team-icons/46842d4f0b0d0e37.png",
+      "source": "TheSportsDB",
+      "resolved_name": "Fortaleza",
+      "source_url": "https://r2.thesportsdb.com/images/media/team/badge/tosmdr1532853458.png",
+      "updated_at": "2026-07-17T05:22:29+00:00"
+    },
+    "新奥里藏蒂诺": {
+      "kind": "crest",
+      "path": "assets/team-icons/7a8a1b0febf44194.png",
+      "source": "TheSportsDB",
+      "resolved_name": "Novorizontino",
+      "source_url": "https://r2.thesportsdb.com/images/media/team/badge/2qwxw51617198963.png",
+      "updated_at": "2026-07-17T05:22:30+00:00"
+    },
+    "纳什维尔SC": {
+      "kind": "crest",
+      "path": "assets/team-icons/d35866287427cd6d.png",
+      "source": "TheSportsDB",
+      "resolved_name": "Nashville SC",
+      "source_url": "https://r2.thesportsdb.com/images/media/team/badge/znrwt71602103062.png",
+      "updated_at": "2026-07-17T05:22:31+00:00"
+    },
+    "亚特兰大联": {
+      "kind": "crest",
+      "path": "assets/team-icons/06513f70dc12566a.png",
+      "source": "TheSportsDB",
+      "resolved_name": "Atlanta United",
+      "source_url": "https://r2.thesportsdb.com/images/media/team/badge/ej091x1602103070.png",
+      "updated_at": "2026-07-17T05:22:33+00:00"
+    },
+    "纳什维尔": {
+      "kind": "crest",
+      "path": "assets/team-icons/b5bdfa73c7132b56.png",
+      "source": "TheSportsDB",
+      "resolved_name": "Nashville SC",
+      "source_url": "https://r2.thesportsdb.com/images/media/team/badge/znrwt71602103062.png",
+      "updated_at": "2026-07-17T05:22:34+00:00"
+    },
+    "亚特联": {
+      "kind": "crest",
+      "path": "assets/team-icons/bdddd053365ba749.png",
+      "source": "TheSportsDB",
+      "resolved_name": "Atlanta United",
+      "source_url": "https://r2.thesportsdb.com/images/media/team/badge/ej091x1602103070.png",
+      "updated_at": "2026-07-17T05:22:35+00:00"
+    },
+    "河床": {
+      "kind": "crest",
+      "path": "assets/team-icons/2db8e9a5d833b5ce.png",
+      "source": "TheSportsDB",
+      "resolved_name": "River Plate",
+      "source_url": "https://r2.thesportsdb.com/images/media/team/badge/03dmi31645539717.png",
+      "updated_at": "2026-07-17T05:22:36+00:00"
+    },
+    "圣路易斯竞技": {
+      "kind": "crest",
+      "path": "assets/team-icons/0f549841db48951b.png",
+      "source": "TheSportsDB",
+      "resolved_name": "Atlético de San Luis",
+      "source_url": "https://r2.thesportsdb.com/images/media/team/badge/9kgjme1593448412.png",
+      "updated_at": "2026-07-17T05:22:39+00:00"
+    },
+    "蓝十字": {
+      "kind": "crest",
+      "path": "assets/team-icons/06e0bb589996f4b3.png",
+      "source": "TheSportsDB",
+      "resolved_name": "Cruz Azul",
+      "source_url": "https://r2.thesportsdb.com/images/media/team/badge/wcd2yi1781543370.png",
+      "updated_at": "2026-07-17T05:22:40+00:00"
+    },
+    "莱昂": {
+      "kind": "crest",
+      "path": "assets/team-icons/a47cb6c0d457c3db.png",
+      "source": "TheSportsDB",
+      "resolved_name": "León",
+      "source_url": "https://r2.thesportsdb.com/images/media/team/badge/pc9gro1752393439.png",
+      "updated_at": "2026-07-17T05:22:42+00:00"
+    },
+    "阿特拉斯": {
+      "kind": "crest",
+      "path": "assets/team-icons/5cd939b10406547a.png",
+      "source": "TheSportsDB",
+      "resolved_name": "Atlas",
+      "source_url": "https://r2.thesportsdb.com/images/media/team/badge/svvyvw1473541813.png",
+      "updated_at": "2026-07-17T05:22:43+00:00"
+    },
+    "洛杉矶银河": {
+      "kind": "crest",
+      "path": "assets/team-icons/0c39e0370c982041.png",
+      "source": "TheSportsDB",
+      "resolved_name": "LA Galaxy",
+      "source_url": "https://r2.thesportsdb.com/images/media/team/badge/ysyysr1420227188.png",
+      "updated_at": "2026-07-17T05:22:45+00:00"
+    },
+    "洛杉矶FC": {
+      "kind": "crest",
+      "path": "assets/team-icons/b0092f94f84f3bf0.png",
+      "source": "TheSportsDB",
+      "resolved_name": "Los Angeles FC",
+      "source_url": "https://r2.thesportsdb.com/images/media/team/badge/7nbj2a1602103638.png",
+      "updated_at": "2026-07-17T05:22:46+00:00"
+    },
+    "洛城银河": {
+      "kind": "crest",
+      "path": "assets/team-icons/ed17e6f2e6e3ba36.png",
+      "source": "TheSportsDB",
+      "resolved_name": "LA Galaxy",
+      "source_url": "https://r2.thesportsdb.com/images/media/team/badge/ysyysr1420227188.png",
+      "updated_at": "2026-07-17T05:22:48+00:00"
+    },
+    "华雷斯": {
+      "kind": "crest",
+      "path": "assets/team-icons/e83506ad75bcd560.png",
+      "source": "TheSportsDB",
+      "resolved_name": "Juárez",
+      "source_url": "https://r2.thesportsdb.com/images/media/team/badge/b4oy071567446336.png",
+      "updated_at": "2026-07-17T05:22:49+00:00"
+    },
+    "普埃布拉": {
+      "kind": "crest",
+      "path": "assets/team-icons/0cfb2df323580fbc.png",
+      "source": "TheSportsDB",
+      "resolved_name": "Puebla",
+      "source_url": "https://r2.thesportsdb.com/images/media/team/badge/h0jgg51593451845.png",
+      "updated_at": "2026-07-17T05:22:51+00:00"
+    },
+    "大田韩亚市民": {
+      "kind": "crest",
+      "path": "assets/team-icons/194663d51ed4f2f4.png",
+      "source": "TheSportsDB",
+      "resolved_name": "Daejeon Hana Citizen",
+      "source_url": "https://r2.thesportsdb.com/images/media/team/badge/o9z6eq1589558557.png",
+      "updated_at": "2026-07-17T05:22:52+00:00"
+    },
+    "蔚山HD": {
+      "kind": "crest",
+      "path": "assets/team-icons/89cfa6505ab61d9b.png",
+      "source": "TheSportsDB",
+      "resolved_name": "Ulsan HD",
+      "source_url": "https://r2.thesportsdb.com/images/media/team/badge/0wooic1706533767.png",
+      "updated_at": "2026-07-17T05:22:54+00:00"
+    },
+    "济州SK": {
+      "kind": "crest",
+      "path": "assets/team-icons/77158ad3ac137aa5.png",
+      "source": "TheSportsDB",
+      "resolved_name": "Jeju SK",
+      "source_url": "https://r2.thesportsdb.com/images/media/team/badge/hna7ae1736207131.png",
+      "updated_at": "2026-07-17T05:22:55+00:00"
+    },
+    "浦项铁人": {
+      "kind": "crest",
+      "path": "assets/team-icons/95ccd188977c7466.png",
+      "source": "TheSportsDB",
+      "resolved_name": "Pohang Steelers",
+      "source_url": "https://r2.thesportsdb.com/images/media/team/badge/63jst01769097748.png",
+      "updated_at": "2026-07-17T05:22:56+00:00"
+    },
+    "大邱FC": {
+      "kind": "crest",
+      "path": "assets/team-icons/7cd4d368666d9640.png",
+      "source": "TheSportsDB",
+      "resolved_name": "Daegu FC",
+      "source_url": "https://r2.thesportsdb.com/images/media/team/badge/xzjzn11579473073.png",
+      "updated_at": "2026-07-17T05:22:58+00:00"
+    },
+    "水原FC": {
+      "kind": "crest",
+      "path": "assets/team-icons/80972f49aa2e027c.png",
+      "source": "TheSportsDB",
+      "resolved_name": "Suwon FC",
+      "source_url": "https://r2.thesportsdb.com/images/media/team/badge/x39pm41589559443.png",
+      "updated_at": "2026-07-17T05:22:59+00:00"
+    },
+    "大田市民": {
+      "kind": "crest",
+      "path": "assets/team-icons/c8958e45aad58efd.png",
+      "source": "TheSportsDB",
+      "resolved_name": "Daejeon Hana Citizen",
+      "source_url": "https://r2.thesportsdb.com/images/media/team/badge/o9z6eq1589558557.png",
+      "updated_at": "2026-07-17T05:23:01+00:00"
+    },
+    "蔚山现代": {
+      "kind": "crest",
+      "path": "assets/team-icons/b1db25c3f529f489.png",
+      "source": "TheSportsDB",
+      "resolved_name": "Ulsan HD",
+      "source_url": "https://r2.thesportsdb.com/images/media/team/badge/0wooic1706533767.png",
+      "updated_at": "2026-07-17T05:23:02+00:00"
+    },
+    "江原FC": {
+      "kind": "crest",
+      "path": "assets/team-icons/32e1c6d95f6314eb.png",
+      "source": "TheSportsDB",
+      "resolved_name": "Gangwon FC",
+      "source_url": "https://r2.thesportsdb.com/images/media/team/badge/c4igx71579729617.png",
+      "updated_at": "2026-07-17T05:23:03+00:00"
+    },
+    "金泉尚武": {
+      "kind": "crest",
+      "path": "assets/team-icons/870d1cf28dbbf697.png",
+      "source": "TheSportsDB",
+      "resolved_name": "Gimcheon Sangmu",
+      "source_url": "https://r2.thesportsdb.com/images/media/team/badge/g4cjyk1609536787.png",
+      "updated_at": "2026-07-17T05:23:05+00:00"
     }
   }
 }
