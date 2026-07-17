@@ -343,13 +343,13 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      min-width: 38px;
-      min-height: 19px;
-      padding: 1px 4px;
+      min-width: 42px;
+      min-height: 22px;
+      padding: 2px 5px;
       border-radius: 4px;
       color: #fff;
-      font-size: 11px;
-      font-weight: 750;
+      font-size: 12px;
+      font-weight: 800;
       line-height: 1;
     }
 
@@ -361,28 +361,29 @@
       align-items: center;
       gap: 3px;
       color: #334155;
+      font-size: 13.5px;
       font-weight: 700;
     }
 
     .matchup {
       display: grid;
-      grid-template-columns: minmax(0, 1fr) 24px minmax(0, 1fr);
+      grid-template-columns: minmax(0, 1fr) 28px minmax(0, 1fr);
       align-items: center;
-      gap: 2px;
+      gap: 4px;
       width: 100%;
     }
 
     .team {
       display: flex;
       align-items: center;
-      gap: 5px;
+      gap: 6px;
       min-width: 0;
     }
 
     .team b {
       min-width: 0;
-      font-size: 13px;
-      line-height: 1.28;
+      font-size: 14px;
+      line-height: 1.32;
       font-weight: 800;
       overflow-wrap: anywhere;
     }
@@ -393,14 +394,15 @@
     }
 
     .team-visual {
-      flex: 0 0 32px;
+      flex: 0 0 40px;
       display: inline-grid;
       place-items: center;
-      width: 32px;
-      height: 32px;
-      padding: 2px;
+      width: 40px;
+      height: 40px;
+      aspect-ratio: 1;
+      padding: 1px;
       overflow: visible;
-      border-radius: 6px;
+      border-radius: 7px;
       background: #fff;
     }
 
@@ -408,13 +410,17 @@
       display: block;
       width: 100%;
       height: 100%;
+      max-width: 100%;
+      max-height: 100%;
       object-fit: contain;
-      object-position: center;
+      object-position: center center;
     }
 
     .team-visual.flag {
-      width: 34px;
-      height: 24px;
+      flex: 0 0 42px;
+      width: 42px;
+      height: 30px;
+      aspect-ratio: 7 / 5;
       padding: 1px;
       overflow: visible;
       border: 1px solid #d9e1e8;
@@ -426,7 +432,10 @@
     .team-visual.flag img {
       width: 100%;
       height: 100%;
+      max-width: 100%;
+      max-height: 100%;
       object-fit: contain;
+      object-position: center center;
     }
 
     .team-visual.placeholder {
@@ -434,14 +443,14 @@
       border: 1px solid rgba(15, 92, 55, 0.22);
       background: linear-gradient(145deg, #0f6b42, #1d8f5d);
       box-shadow: 0 2px 5px rgba(15, 92, 55, 0.18);
-      font-size: 14px;
+      font-size: 16px;
       font-weight: 900;
       line-height: 1;
     }
 
     .versus {
       color: #94a3b8;
-      font-size: 10.5px;
+      font-size: 11.5px;
       font-weight: 800;
       text-align: center;
     }
@@ -450,10 +459,10 @@
     .review-table small,
     .system-info-grid span {
       display: block;
-      margin-top: 1px;
+      margin-top: 2px;
       color: var(--muted);
-      font-size: 11.5px;
-      line-height: 1.28;
+      font-size: 12.5px;
+      line-height: 1.34;
     }
 
     .review-table {
@@ -533,8 +542,8 @@
       padding: 4px 4px;
       text-align: left;
       vertical-align: top;
-      font-size: 12.5px;
-      line-height: 1.32;
+      font-size: 13.5px;
+      line-height: 1.42;
       overflow-wrap: break-word;
       word-break: break-word;
       min-width: 0;
@@ -612,7 +621,7 @@
       thead { display: table-header-group; }
       tbody { display: table-row-group; }
       tr { display: table-row; }
-      th, td { display: table-cell; width: auto; min-width: 0; font-size: 12.5px; line-height: 1.35; }
+      th, td { display: table-cell; width: auto; min-width: 0; font-size: 13.5px; line-height: 1.42; }
       td::before { display: none; }
 
       #predictions .table-wrap {
@@ -662,8 +671,8 @@
         max-width: none !important;
         padding: 6px 8px;
         border-bottom: 1px solid #e7eee9;
-        font-size: 15px;
-        line-height: 1.38;
+        font-size: 16px;
+        line-height: 1.42;
         overflow-wrap: anywhere;
       }
 
@@ -675,13 +684,13 @@
         content: attr(data-label);
         display: block;
         color: var(--muted);
-        font-size: 13.5px;
+        font-size: 14px;
         font-weight: 700;
       }
 
       .prediction-table td[data-label="对阵"] {
         color: var(--pitch-dark);
-        font-size: 17px;
+        font-size: 18px;
         font-weight: 700;
       }
 
@@ -694,12 +703,12 @@
       }
 
       .prediction-table .team b {
-        font-size: 16px;
+        font-size: 17px;
       }
 
       .prediction-table small {
-        font-size: 14px;
-        line-height: 1.32;
+        font-size: 14.5px;
+        line-height: 1.38;
       }
 
       #reviews .table-wrap {
@@ -747,8 +756,8 @@
         max-width: none !important;
         padding: 6px 8px;
         border-bottom: 1px solid #e7eee9;
-        font-size: 15px;
-        line-height: 1.38;
+        font-size: 16px;
+        line-height: 1.42;
         overflow-wrap: anywhere;
       }
 
@@ -760,7 +769,7 @@
         content: attr(data-label);
         display: block;
         color: var(--muted);
-        font-size: 13.5px;
+        font-size: 14px;
         font-weight: 700;
       }
 
@@ -769,16 +778,16 @@
       }
 
       .review-table small {
-        font-size: 14px;
-        line-height: 1.32;
+        font-size: 14.5px;
+        line-height: 1.38;
       }
 
       .status-grid { grid-template-columns: 1fr; }
       .system-info-grid { grid-template-columns: 1fr; }
     }
   </style>
-<meta name="dashboard-build-id" content="20260717140240476478">
-  <meta name="dashboard-generated-at" content="2026-07-17T14:02:40+08:00">
+<meta name="dashboard-build-id" content="20260717141713026899">
+  <meta name="dashboard-generated-at" content="2026-07-17T14:17:13+08:00">
   <meta name="dashboard-model-version" content="V1_CHAMPION_UNIFIED_V41">
   <meta name="dashboard-ruleset-version" content="UNIFIED_RULESET_1.2.0_COMPAT">
   <meta name="dashboard-build-status" content="ok">
@@ -809,7 +818,7 @@
 <section id="status">
   <h2>今日状态</h2>
   <div class="status-grid">
-    <div class="metric"><span>更新时间</span><strong data-dashboard-generated>2026-07-17T14:02:40+08:00</strong></div>
+    <div class="metric"><span>更新时间</span><strong data-dashboard-generated>2026-07-17T14:17:13+08:00</strong></div>
     <div class="metric"><span>比赛待售情况</span><strong data-sale-status data-sporttery-count="15" data-beijing-count="90">体彩15场 · 北单90场 · 去重100场</strong></div>
   </div>
 </section>
