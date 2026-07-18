@@ -1880,6 +1880,142 @@
       "resolved_name": "罗甲所属国家/地区",
       "source_url": "https://flagcdn.com/w160/ro.png",
       "updated_at": "2026-07-17T08:04:03+00:00"
+    },
+    "索尔纳": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-se.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "瑞超所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/se.png",
+      "updated_at": "2026-07-18T03:09:29+00:00"
+    },
+    "盖斯": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-se.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "瑞超所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/se.png",
+      "updated_at": "2026-07-18T03:09:29+00:00"
+    },
+    "利勒斯特": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-no.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "挪超所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/no.png",
+      "updated_at": "2026-07-18T03:09:29+00:00"
+    },
+    "奥斯KFUM": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-no.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "挪超所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/no.png",
+      "updated_at": "2026-07-18T03:09:29+00:00"
+    },
+    "克里斯蒂": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-no.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "挪超所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/no.png",
+      "updated_at": "2026-07-18T03:09:29+00:00"
+    },
+    "萨普斯堡": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-no.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "挪超所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/no.png",
+      "updated_at": "2026-07-18T03:09:29+00:00"
+    },
+    "赫尔火花": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-fi.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "芬超所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/fi.png",
+      "updated_at": "2026-07-18T03:09:29+00:00"
+    },
+    "塞伊奈": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-fi.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "芬超所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/fi.png",
+      "updated_at": "2026-07-18T03:09:29+00:00"
+    },
+    "库奥皮奥": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-fi.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "芬超所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/fi.png",
+      "updated_at": "2026-07-18T03:09:29+00:00"
+    },
+    "桑纳菲": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-no.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "挪超所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/no.png",
+      "updated_at": "2026-07-18T03:09:29+00:00"
+    },
+    "埃夫斯堡": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-se.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "瑞超所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/se.png",
+      "updated_at": "2026-07-18T03:09:29+00:00"
+    },
+    "哈尔姆斯": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-se.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "瑞超所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/se.png",
+      "updated_at": "2026-07-18T03:09:29+00:00"
+    },
+    "雅罗": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-fi.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "芬超所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/fi.png",
+      "updated_at": "2026-07-18T03:09:29+00:00"
+    },
+    "国际图尔": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-fi.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "芬超所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/fi.png",
+      "updated_at": "2026-07-18T03:09:29+00:00"
+    },
+    "TPS图尔": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-fi.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "芬超所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/fi.png",
+      "updated_at": "2026-07-18T03:09:29+00:00"
+    },
+    "坦山猫": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-fi.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "芬超所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/fi.png",
+      "updated_at": "2026-07-18T03:09:29+00:00"
+    },
+    "厄格里特": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-se.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "瑞超所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/se.png",
+      "updated_at": "2026-07-18T03:09:29+00:00"
     }
   }
 }
