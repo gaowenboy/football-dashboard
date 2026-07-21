@@ -1407,8 +1407,8 @@
       .system-info-grid { grid-template-columns: 1fr; }
     }
   </style>
-<meta name="dashboard-build-id" content="20260721112645444694">
-  <meta name="dashboard-generated-at" content="2026-07-21T11:26:45+08:00">
+<meta name="dashboard-build-id" content="20260721112856454143">
+  <meta name="dashboard-generated-at" content="2026-07-21T11:28:56+08:00">
   <meta name="dashboard-model-version" content="V1_CHAMPION_UNIFIED_V41">
   <meta name="dashboard-ruleset-version" content="UNIFIED_RULESET_1.2.0_COMPAT">
   <meta name="dashboard-build-status" content="ok">
@@ -1440,7 +1440,7 @@
 <section id="status">
   <h2>今日状态</h2>
   <div class="status-grid">
-    <div class="metric"><span>更新时间</span><strong data-dashboard-generated>2026-07-21T11:26:45+08:00</strong></div>
+    <div class="metric"><span>更新时间</span><strong data-dashboard-generated>2026-07-21T11:28:56+08:00</strong></div>
     <div class="metric"><span>比赛待售情况</span><strong data-sale-status data-sporttery-count="11" data-beijing-count="0">体彩11场 · 北单0场 · 去重11场</strong></div>
   </div>
 </section>
@@ -1458,13 +1458,12 @@
   </main>
 
   <script>
-    const currentBuildId = document.querySelector('meta[name="dashboard-build-id"]')?.content || '';
+    let currentBuildId = document.querySelector('meta[name="dashboard-build-id"]')?.content || '';
     const statusNode = document.getElementById('refresh-status');
     const autoToggleNode = document.getElementById('auto-refresh-toggle');
     const autoStatusNode = document.getElementById('auto-refresh-status');
     const publicAutoUpdateKey = 'football-dashboard-public-auto-update';
-    const publicAutoUpdateIntervalMs = 300000;
-    let lastActivityAt = Date.now();
+    const publicAutoUpdateIntervalMs = 60000;
 
     function publicAutoUpdateEnabled() {
       try {
@@ -1489,7 +1488,7 @@
         autoToggleNode.classList.toggle('is-off', !enabled);
       }
       if (autoStatusNode) {
-        autoStatusNode.textContent = extra || (enabled ? '每10分钟自动检查已发布新版本' : '自动检查已暂停');
+        autoStatusNode.textContent = extra || (enabled ? '每1分钟自动同步已发布新版本' : '自动检查已暂停');
       }
     }
 
@@ -1529,6 +1528,49 @@
       });
     }
 
+    function expandedAnalysisPanels() {
+      return Array.from(document.querySelectorAll('.match-analysis-toggle[aria-expanded="true"]'))
+        .map((button) => button.getAttribute('aria-controls'))
+        .filter(Boolean);
+    }
+
+    function restoreExpandedAnalysisPanels(panelIds) {
+      panelIds.forEach((panelId) => {
+        const panel = document.getElementById(panelId);
+        const button = document.querySelector(`.match-analysis-toggle[aria-controls="${CSS.escape(panelId)}"]`);
+        if (!panel || !button) return;
+        panel.hidden = false;
+        button.setAttribute('aria-expanded', 'true');
+        button.closest('.prediction-main-row')?.classList.add('analysis-open');
+        const label = button.querySelector('.analysis-toggle-label');
+        if (label) label.textContent = '收起分析';
+      });
+    }
+
+    async function applyPublishedBuild(meta) {
+      const response = await fetch(`index.html?build=${encodeURIComponent(meta.build_id)}&_=${Date.now()}`, {
+        cache: 'no-store',
+      });
+      if (!response.ok) throw new Error(`页面 HTTP ${response.status}`);
+      const parsed = new DOMParser().parseFromString(await response.text(), 'text/html');
+      const freshMain = parsed.querySelector('main');
+      const currentMain = document.querySelector('main');
+      if (!freshMain || !currentMain) throw new Error('发布页面缺少主内容');
+
+      const scrollY = window.scrollY || 0;
+      const expandedPanels = expandedAnalysisPanels();
+      currentMain.replaceWith(document.importNode(freshMain, true));
+      restoreExpandedAnalysisPanels(expandedPanels);
+
+      const buildMeta = document.querySelector('meta[name="dashboard-build-id"]');
+      if (buildMeta) buildMeta.content = meta.build_id;
+      currentBuildId = meta.build_id;
+      const target = new URL(window.location.href);
+      target.searchParams.set('build', meta.build_id);
+      history.replaceState(null, '', target.toString());
+      requestAnimationFrame(() => window.scrollTo(0, scrollY));
+    }
+
     async function checkPublishedBuild(manual = false) {
       if (manual && statusNode) statusNode.textContent = '正在检查已发布更新...';
       if (autoStatusNode) autoStatusNode.textContent = manual ? '正在手动检查...' : '正在自动检查...';
@@ -1540,21 +1582,16 @@
           statusNode.textContent = '新构建存在概率冲突或校准数据问题，已发布但请查看状态明细。';
         }
         if (meta.build_id && meta.build_id !== currentBuildId) {
-          if (Date.now() - lastActivityAt < 90000 && window.scrollY > 80 && !manual) {
-            if (statusNode) statusNode.textContent = `发现新版本 ${meta.build_id}，停止浏览后可点击检查更新。`;
-            return;
-          }
-          rememberScroll();
-          const target = new URL(window.location.href);
-          target.searchParams.set('build', meta.build_id);
-          window.location.replace(target.toString());
+          await applyPublishedBuild(meta);
+          if (statusNode) statusNode.textContent = `已同步最新待售与赛果（${meta.build_id}）。`;
+          if (autoStatusNode) autoStatusNode.textContent = `最近同步：${new Date().toLocaleTimeString('zh-CN', {hour12: false})}`;
           return;
         }
         if (statusNode) statusNode.textContent = '当前已是最新发布版本。';
         if (autoStatusNode) autoStatusNode.textContent = `最近检查：${new Date().toLocaleTimeString('zh-CN', {hour12: false})}`;
       } catch (error) {
         if (statusNode) statusNode.textContent = `检查发布版本失败：${error.message || error}`;
-        if (autoStatusNode) autoStatusNode.textContent = '自动检查失败，10分钟后重试';
+        if (autoStatusNode) autoStatusNode.textContent = '自动检查失败，1分钟后重试';
       }
     }
 
@@ -1564,7 +1601,6 @@
       setPublicAutoUpdateEnabled(enabled);
       if (enabled) checkPublishedBuild(false);
     });
-    ['scroll', 'click', 'keydown', 'touchstart'].forEach((name) => window.addEventListener(name, () => { lastActivityAt = Date.now(); }, {passive: true}));
     restoreScroll();
     renderPublicAutoUpdateState();
     bindMatchAnalysisToggles();
