@@ -2016,6 +2016,14 @@
       "resolved_name": "瑞超所属国家/地区",
       "source_url": "https://flagcdn.com/w160/se.png",
       "updated_at": "2026-07-18T03:09:29+00:00"
+    },
+    "米竞技": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-br.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "巴甲所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/br.png",
+      "updated_at": "2026-07-21T03:14:52+00:00"
     }
   }
 }
