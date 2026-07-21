@@ -2024,6 +2024,86 @@
       "resolved_name": "巴甲所属国家/地区",
       "source_url": "https://flagcdn.com/w160/br.png",
       "updated_at": "2026-07-21T03:14:52+00:00"
+    },
+    "法尔肯贝里": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-se.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "瑞典甲所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/se.png",
+      "updated_at": "2026-07-21T04:09:31+00:00"
+    },
+    "赫尔辛堡": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-se.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "瑞典甲所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/se.png",
+      "updated_at": "2026-07-21T04:09:31+00:00"
+    },
+    "因弗内斯": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-gb-sct.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "苏联赛杯所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/gb-sct.png",
+      "updated_at": "2026-07-21T04:09:31+00:00"
+    },
+    "圣约翰斯通": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-gb-sct.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "苏联赛杯所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/gb-sct.png",
+      "updated_at": "2026-07-21T04:09:31+00:00"
+    },
+    "弗拉门戈": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-br.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "巴西甲所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/br.png",
+      "updated_at": "2026-07-21T04:09:31+00:00"
+    },
+    "圣保罗": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-br.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "巴西甲所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/br.png",
+      "updated_at": "2026-07-21T04:09:31+00:00"
+    },
+    "巴拉纳竞技": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-br.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "巴西甲所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/br.png",
+      "updated_at": "2026-07-21T04:09:31+00:00"
+    },
+    "科林蒂安": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-br.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "巴西甲所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/br.png",
+      "updated_at": "2026-07-21T04:09:31+00:00"
+    },
+    "雷莫": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-br.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "巴西甲所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/br.png",
+      "updated_at": "2026-07-21T04:09:31+00:00"
+    },
+    "尤文图德": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-br.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "巴西乙所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/br.png",
+      "updated_at": "2026-07-21T04:09:31+00:00"
     }
   }
 }
