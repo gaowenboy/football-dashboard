@@ -2104,6 +2104,22 @@
       "resolved_name": "巴西乙所属国家/地区",
       "source_url": "https://flagcdn.com/w160/br.png",
       "updated_at": "2026-07-21T04:09:31+00:00"
+    },
+    "巴竞技": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-br.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "巴甲所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/br.png",
+      "updated_at": "2026-07-22T03:37:57+00:00"
+    },
+    "里莫": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-br.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "巴甲所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/br.png",
+      "updated_at": "2026-07-22T03:37:57+00:00"
     }
   }
 }
