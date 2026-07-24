@@ -2200,6 +2200,14 @@
       "resolved_name": "巴西甲所属国家/地区",
       "source_url": "https://flagcdn.com/w160/br.png",
       "updated_at": "2026-07-24T03:35:55+00:00"
+    },
+    "瓦勒伦": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-no.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "挪超所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/no.png",
+      "updated_at": "2026-07-24T03:38:24+00:00"
     }
   }
 }
