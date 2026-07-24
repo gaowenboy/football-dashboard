@@ -2376,6 +2376,38 @@
       "resolved_name": "挪甲所属国家/地区",
       "source_url": "https://flagcdn.com/w160/no.png",
       "updated_at": "2026-07-24T04:34:15+00:00"
+    },
+    "图库曼": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-ar.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "阿甲所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/ar.png",
+      "updated_at": "2026-07-24T04:43:45+00:00"
+    },
+    "门多萨": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-ar.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "阿甲所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/ar.png",
+      "updated_at": "2026-07-24T04:43:45+00:00"
+    },
+    "瑞模": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-br.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "巴西甲所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/br.png",
+      "updated_at": "2026-07-24T04:43:45+00:00"
+    },
+    "维多利": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-br.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "巴西甲所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/br.png",
+      "updated_at": "2026-07-24T04:43:45+00:00"
     }
   }
 }
