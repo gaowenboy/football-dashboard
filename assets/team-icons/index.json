@@ -2360,6 +2360,22 @@
       "resolved_name": "冰岛超所属国家/地区",
       "source_url": "https://flagcdn.com/w160/is.png",
       "updated_at": "2026-07-24T04:31:24+00:00"
+    },
+    "松达尔": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-no.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "挪甲所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/no.png",
+      "updated_at": "2026-07-24T04:34:15+00:00"
+    },
+    "兰赫姆": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-no.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "挪甲所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/no.png",
+      "updated_at": "2026-07-24T04:34:15+00:00"
     }
   }
 }
