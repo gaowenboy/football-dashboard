@@ -2464,6 +2464,38 @@
       "resolved_name": "挪超所属国家/地区",
       "source_url": "https://flagcdn.com/w160/no.png",
       "updated_at": "2026-07-24T05:26:05+00:00"
+    },
+    "雷亚丘": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-ro.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "罗甲所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/ro.png",
+      "updated_at": "2026-07-24T05:45:00+00:00"
+    },
+    "布加勒": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-ro.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "罗甲所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/ro.png",
+      "updated_at": "2026-07-24T05:45:00+00:00"
+    },
+    "贝雷达": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-is.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "冰岛超所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/is.png",
+      "updated_at": "2026-07-24T05:45:00+00:00"
+    },
+    "韦斯特": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-is.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "冰岛超所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/is.png",
+      "updated_at": "2026-07-24T05:45:00+00:00"
     }
   }
 }
