@@ -2320,6 +2320,22 @@
       "resolved_name": "巴西甲所属国家/地区",
       "source_url": "https://flagcdn.com/w160/br.png",
       "updated_at": "2026-07-24T04:23:36+00:00"
+    },
+    "国际图": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-fi.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "芬超所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/fi.png",
+      "updated_at": "2026-07-24T04:27:50+00:00"
+    },
+    "赫尔火": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-fi.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "芬超所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/fi.png",
+      "updated_at": "2026-07-24T04:27:50+00:00"
     }
   }
 }
