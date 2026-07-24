@@ -2336,6 +2336,30 @@
       "resolved_name": "芬超所属国家/地区",
       "source_url": "https://flagcdn.com/w160/fi.png",
       "updated_at": "2026-07-24T04:27:50+00:00"
+    },
+    "拉普大": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-ar.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "阿甲所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/ar.png",
+      "updated_at": "2026-07-24T04:31:24+00:00"
+    },
+    "KA阿": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-is.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "冰岛超所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/is.png",
+      "updated_at": "2026-07-24T04:31:24+00:00"
+    },
+    "索尔": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-is.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "冰岛超所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/is.png",
+      "updated_at": "2026-07-24T04:31:24+00:00"
     }
   }
 }
