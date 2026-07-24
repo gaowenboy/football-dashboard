@@ -2448,6 +2448,22 @@
       "resolved_name": "挪超所属国家/地区",
       "source_url": "https://flagcdn.com/w160/no.png",
       "updated_at": "2026-07-24T05:21:52+00:00"
+    },
+    "克鲁日": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-ro.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "罗甲所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/ro.png",
+      "updated_at": "2026-07-24T05:26:05+00:00"
+    },
+    "博德闪": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-no.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "挪超所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/no.png",
+      "updated_at": "2026-07-24T05:26:05+00:00"
     }
   }
 }
