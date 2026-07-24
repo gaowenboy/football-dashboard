@@ -2256,6 +2256,30 @@
       "resolved_name": "阿甲所属国家/地区",
       "source_url": "https://flagcdn.com/w160/ar.png",
       "updated_at": "2026-07-24T03:50:30+00:00"
+    },
+    "坡州市": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-kr.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "K2联赛所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/kr.png",
+      "updated_at": "2026-07-24T03:57:22+00:00"
+    },
+    "安山小": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-kr.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "K2联赛所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/kr.png",
+      "updated_at": "2026-07-24T03:57:22+00:00"
+    },
+    "桑德维": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-se.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "瑞典甲所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/se.png",
+      "updated_at": "2026-07-24T03:57:22+00:00"
     }
   }
 }
