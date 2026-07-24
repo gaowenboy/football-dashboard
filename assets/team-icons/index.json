@@ -2424,6 +2424,22 @@
       "resolved_name": "罗甲所属国家/地区",
       "source_url": "https://flagcdn.com/w160/ro.png",
       "updated_at": "2026-07-24T04:48:16+00:00"
+    },
+    "戈亚尼": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-br.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "巴西乙所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/br.png",
+      "updated_at": "2026-07-24T04:59:34+00:00"
+    },
+    "奥佩拉": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-br.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "巴西乙所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/br.png",
+      "updated_at": "2026-07-24T04:59:34+00:00"
     }
   }
 }
