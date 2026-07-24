@@ -2408,6 +2408,14 @@
       "resolved_name": "巴西甲所属国家/地区",
       "source_url": "https://flagcdn.com/w160/br.png",
       "updated_at": "2026-07-24T04:43:45+00:00"
+    },
+    "哈尔姆": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-se.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "瑞典超所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/se.png",
+      "updated_at": "2026-07-24T04:45:53+00:00"
     }
   }
 }
