@@ -2208,6 +2208,38 @@
       "resolved_name": "挪超所属国家/地区",
       "source_url": "https://flagcdn.com/w160/no.png",
       "updated_at": "2026-07-24T03:38:24+00:00"
+    },
+    "克里西": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-br.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "巴西乙所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/br.png",
+      "updated_at": "2026-07-24T03:42:17+00:00"
+    },
+    "累西腓": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-br.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "巴西乙所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/br.png",
+      "updated_at": "2026-07-24T03:42:17+00:00"
+    },
+    "斯塔贝": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-no.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "挪甲所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/no.png",
+      "updated_at": "2026-07-24T03:42:17+00:00"
+    },
+    "赫德": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-no.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "挪甲所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/no.png",
+      "updated_at": "2026-07-24T03:42:17+00:00"
     }
   }
 }
