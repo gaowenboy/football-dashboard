@@ -2416,6 +2416,14 @@
       "resolved_name": "瑞典超所属国家/地区",
       "source_url": "https://flagcdn.com/w160/se.png",
       "updated_at": "2026-07-24T04:45:53+00:00"
+    },
+    "沃伦塔": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-ro.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "罗甲所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/ro.png",
+      "updated_at": "2026-07-24T04:48:16+00:00"
     }
   }
 }
