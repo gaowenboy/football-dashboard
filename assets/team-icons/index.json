@@ -2496,6 +2496,246 @@
       "resolved_name": "冰岛超所属国家/地区",
       "source_url": "https://flagcdn.com/w160/is.png",
       "updated_at": "2026-07-24T05:45:00+00:00"
+    },
+    "金海FC": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-kr.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "K2联赛所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/kr.png",
+      "updated_at": "2026-07-24T05:52:07+00:00"
+    },
+    "阿斯隆城": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-ie.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "爱甲所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/ie.png",
+      "updated_at": "2026-07-24T05:52:07+00:00"
+    },
+    "邓多克": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-ie.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "爱超所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/ie.png",
+      "updated_at": "2026-07-24T05:52:07+00:00"
+    },
+    "MP米凯利": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-fi.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "芬甲所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/fi.png",
+      "updated_at": "2026-07-24T05:52:07+00:00"
+    },
+    "格里诺克摩顿": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-gb-sct.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "苏联赛杯所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/gb-sct.png",
+      "updated_at": "2026-07-24T05:52:07+00:00"
+    },
+    "斯坦豪斯摩尔": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-gb-sct.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "苏联赛杯所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/gb-sct.png",
+      "updated_at": "2026-07-24T05:52:07+00:00"
+    },
+    "利文斯顿": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-gb-sct.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "苏联赛杯所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/gb-sct.png",
+      "updated_at": "2026-07-24T05:52:07+00:00"
+    },
+    "吉波": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-fi.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "芬甲所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/fi.png",
+      "updated_at": "2026-07-24T05:52:07+00:00"
+    },
+    "戈尔韦联": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-ie.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "爱超所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/ie.png",
+      "updated_at": "2026-07-24T05:52:07+00:00"
+    },
+    "斯托姆加斯特": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-no.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "挪甲所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/no.png",
+      "updated_at": "2026-07-24T05:52:07+00:00"
+    },
+    "利恩": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-no.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "挪甲所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/no.png",
+      "updated_at": "2026-07-24T05:52:07+00:00"
+    },
+    "海于格松": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-no.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "挪甲所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/no.png",
+      "updated_at": "2026-07-24T05:52:07+00:00"
+    },
+    "布莱尼": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-no.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "挪甲所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/no.png",
+      "updated_at": "2026-07-24T05:52:07+00:00"
+    },
+    "朗福德城": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-ie.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "爱甲所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/ie.png",
+      "updated_at": "2026-07-24T05:52:07+00:00"
+    },
+    "斯莱戈流浪者": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-ie.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "爱超所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/ie.png",
+      "updated_at": "2026-07-24T05:52:07+00:00"
+    },
+    "德罗赫达联": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-ie.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "爱超所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/ie.png",
+      "updated_at": "2026-07-24T05:52:07+00:00"
+    },
+    "巴西国际": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-br.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "巴西甲所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/br.png",
+      "updated_at": "2026-07-24T05:52:07+00:00"
+    },
+    "圣米伦": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-gb-sct.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "苏联赛杯所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/gb-sct.png",
+      "updated_at": "2026-07-24T05:52:07+00:00"
+    },
+    "邓弗姆林竞技": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-gb-sct.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "苏联赛杯所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/gb-sct.png",
+      "updated_at": "2026-07-24T05:52:07+00:00"
+    },
+    "赖于福斯": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-no.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "挪甲所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/no.png",
+      "updated_at": "2026-07-24T05:52:07+00:00"
+    },
+    "桑内斯乌尔夫": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-no.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "挪甲所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/no.png",
+      "updated_at": "2026-07-24T05:52:07+00:00"
+    },
+    "孔斯温厄尔": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-no.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "挪甲所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/no.png",
+      "updated_at": "2026-07-24T05:52:07+00:00"
+    },
+    "兰黑姆": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-no.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "挪甲所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/no.png",
+      "updated_at": "2026-07-24T05:52:07+00:00"
+    },
+    "斯托曼": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-no.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "挪甲所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/no.png",
+      "updated_at": "2026-07-24T05:52:07+00:00"
+    },
+    "奥德": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-no.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "挪甲所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/no.png",
+      "updated_at": "2026-07-24T05:52:07+00:00"
+    },
+    "奥桑内": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-no.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "挪甲所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/no.png",
+      "updated_at": "2026-07-24T05:52:07+00:00"
+    },
+    "埃格尔松": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-no.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "挪甲所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/no.png",
+      "updated_at": "2026-07-24T05:52:07+00:00"
+    },
+    "帕尔梅拉斯": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-br.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "巴西甲所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/br.png",
+      "updated_at": "2026-07-24T05:52:07+00:00"
+    },
+    "米内罗竞技": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-br.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "巴西甲所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/br.png",
+      "updated_at": "2026-07-24T05:52:07+00:00"
+    },
+    "斯塔贝克": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-no.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "挪甲所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/no.png",
+      "updated_at": "2026-07-24T05:52:07+00:00"
     }
   }
 }
