@@ -2736,6 +2736,14 @@
       "resolved_name": "挪甲所属国家/地区",
       "source_url": "https://flagcdn.com/w160/no.png",
       "updated_at": "2026-07-24T05:52:07+00:00"
+    },
+    "腓特烈": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-no.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "挪超所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/no.png",
+      "updated_at": "2026-07-25T04:06:30+00:00"
     }
   }
 }
