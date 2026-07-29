@@ -2744,6 +2744,14 @@
       "resolved_name": "挪超所属国家/地区",
       "source_url": "https://flagcdn.com/w160/no.png",
       "updated_at": "2026-07-25T04:06:30+00:00"
+    },
+    "帕梅拉斯": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-br.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "巴甲所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/br.png",
+      "updated_at": "2026-07-29T03:12:59+00:00"
     }
   }
 }
