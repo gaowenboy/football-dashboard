@@ -2832,6 +2832,54 @@
       "resolved_name": "挪超所属国家/地区",
       "source_url": "https://flagcdn.com/w160/no.png",
       "updated_at": "2026-07-31T03:27:59+00:00"
+    },
+    "哈茨": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-gb-sct.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "苏超所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/gb-sct.png",
+      "updated_at": "2026-07-31T04:01:36+00:00"
+    },
+    "克拉约": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-ro.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "罗甲所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/ro.png",
+      "updated_at": "2026-07-31T04:01:36+00:00"
+    },
+    "普洛耶": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-ro.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "罗甲所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/ro.png",
+      "updated_at": "2026-07-31T04:01:36+00:00"
+    },
+    "金海": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-kr.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "K2联赛所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/kr.png",
+      "updated_at": "2026-07-31T04:01:36+00:00"
+    },
+    "厄尔格": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-se.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "瑞典超所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/se.png",
+      "updated_at": "2026-07-31T04:01:36+00:00"
+    },
+    "特罗姆": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-no.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "挪超所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/no.png",
+      "updated_at": "2026-07-31T04:01:36+00:00"
     }
   }
 }
