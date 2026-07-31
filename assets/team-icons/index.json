@@ -2984,6 +2984,110 @@
       "resolved_name": "苏冠所属国家/地区",
       "source_url": "https://flagcdn.com/w160/gb-sct.png",
       "updated_at": "2026-07-31T04:14:05+00:00"
+    },
+    "兰斯克": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-se.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "瑞典甲所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/se.png",
+      "updated_at": "2026-07-31T05:00:50+00:00"
+    },
+    "阿拉德": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-ro.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "罗甲所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/ro.png",
+      "updated_at": "2026-07-31T05:00:50+00:00"
+    },
+    "金浦市": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-kr.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "K2联赛所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/kr.png",
+      "updated_at": "2026-07-31T05:00:50+00:00"
+    },
+    "庆南F": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-kr.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "K2联赛所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/kr.png",
+      "updated_at": "2026-07-31T05:00:50+00:00"
+    },
+    "布鲁马": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-se.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "瑞典超所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/se.png",
+      "updated_at": "2026-07-31T05:00:50+00:00"
+    },
+    "慕达拉": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-se.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "瑞典甲所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/se.png",
+      "updated_at": "2026-07-31T05:00:50+00:00"
+    },
+    "AC奥": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-fi.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "芬超所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/fi.png",
+      "updated_at": "2026-07-31T05:00:50+00:00"
+    },
+    "博托沙": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-ro.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "罗甲所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/ro.png",
+      "updated_at": "2026-07-31T05:00:50+00:00"
+    },
+    "威福特": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-ie.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "爱甲所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/ie.png",
+      "updated_at": "2026-07-31T05:00:50+00:00"
+    },
+    "布雷": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-ie.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "爱甲所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/ie.png",
+      "updated_at": "2026-07-31T05:00:50+00:00"
+    },
+    "凯尔特": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-gb-sct.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "苏超所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/gb-sct.png",
+      "updated_at": "2026-07-31T05:00:50+00:00"
+    },
+    "邓迪F": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-gb-sct.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "苏超所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/gb-sct.png",
+      "updated_at": "2026-07-31T05:00:50+00:00"
+    },
+    "斯塔尔": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-is.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "冰岛超所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/is.png",
+      "updated_at": "2026-07-31T05:00:50+00:00"
     }
   }
 }
