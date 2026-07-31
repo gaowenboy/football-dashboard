@@ -3128,6 +3128,14 @@
       "resolved_name": "挪甲所属国家/地区",
       "source_url": "https://flagcdn.com/w160/no.png",
       "updated_at": "2026-07-31T05:17:35+00:00"
+    },
+    "圣帕特": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-ie.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "爱超所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/ie.png",
+      "updated_at": "2026-07-31T05:27:11+00:00"
     }
   }
 }
