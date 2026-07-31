@@ -3112,6 +3112,14 @@
       "resolved_name": "阿甲所属国家/地区",
       "source_url": "https://flagcdn.com/w160/ar.png",
       "updated_at": "2026-07-31T05:03:47+00:00"
+    },
+    "防御与": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-ar.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "阿甲所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/ar.png",
+      "updated_at": "2026-07-31T05:07:25+00:00"
     }
   }
 }
