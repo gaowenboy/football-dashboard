@@ -3088,6 +3088,30 @@
       "resolved_name": "冰岛超所属国家/地区",
       "source_url": "https://flagcdn.com/w160/is.png",
       "updated_at": "2026-07-31T05:00:50+00:00"
+    },
+    "阿尔多": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-ar.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "阿甲所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/ar.png",
+      "updated_at": "2026-07-31T05:03:47+00:00"
+    },
+    "拉普拉": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-ar.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "阿甲所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/ar.png",
+      "updated_at": "2026-07-31T05:03:47+00:00"
+    },
+    "萨米恩": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-ar.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "阿甲所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/ar.png",
+      "updated_at": "2026-07-31T05:03:47+00:00"
     }
   }
 }
