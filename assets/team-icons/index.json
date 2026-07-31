@@ -2968,6 +2968,22 @@
       "resolved_name": "爱甲所属国家/地区",
       "source_url": "https://flagcdn.com/w160/ie.png",
       "updated_at": "2026-07-31T04:08:06+00:00"
+    },
+    "拉茨流": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-gb-sct.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "苏冠所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/gb-sct.png",
+      "updated_at": "2026-07-31T04:14:05+00:00"
+    },
+    "斯坦豪": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-gb-sct.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "苏冠所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/gb-sct.png",
+      "updated_at": "2026-07-31T04:14:05+00:00"
     }
   }
 }
