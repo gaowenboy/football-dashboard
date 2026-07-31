@@ -2752,6 +2752,22 @@
       "resolved_name": "巴甲所属国家/地区",
       "source_url": "https://flagcdn.com/w160/br.png",
       "updated_at": "2026-07-29T03:12:59+00:00"
+    },
+    "竞技俱": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-ar.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "阿甲所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/ar.png",
+      "updated_at": "2026-07-31T03:04:19+00:00"
+    },
+    "老虎竞": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-ar.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "阿甲所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/ar.png",
+      "updated_at": "2026-07-31T03:04:19+00:00"
     }
   }
 }
