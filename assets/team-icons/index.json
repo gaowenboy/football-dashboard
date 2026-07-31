@@ -2880,6 +2880,38 @@
       "resolved_name": "挪超所属国家/地区",
       "source_url": "https://flagcdn.com/w160/no.png",
       "updated_at": "2026-07-31T04:01:36+00:00"
+    },
+    "代格福": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-se.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "瑞典超所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/se.png",
+      "updated_at": "2026-07-31T04:05:52+00:00"
+    },
+    "IA阿": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-is.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "冰岛超所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/is.png",
+      "updated_at": "2026-07-31T04:05:52+00:00"
+    },
+    "维京人": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-is.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "冰岛超所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/is.png",
+      "updated_at": "2026-07-31T04:05:52+00:00"
+    },
+    "飓风": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-ar.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "阿甲所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/ar.png",
+      "updated_at": "2026-07-31T04:05:52+00:00"
     }
   }
 }
