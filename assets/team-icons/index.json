@@ -2768,6 +2768,38 @@
       "resolved_name": "阿甲所属国家/地区",
       "source_url": "https://flagcdn.com/w160/ar.png",
       "updated_at": "2026-07-31T03:04:19+00:00"
+    },
+    "圣菲联": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-ar.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "阿甲所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/ar.png",
+      "updated_at": "2026-07-31T03:13:00+00:00"
+    },
+    "尤文图": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-br.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "巴西杯所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/br.png",
+      "updated_at": "2026-07-31T03:13:00+00:00"
+    },
+    "巴西国": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-br.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "巴西杯所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/br.png",
+      "updated_at": "2026-07-31T03:13:00+00:00"
+    },
+    "科尔多": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-ar.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "阿甲所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/ar.png",
+      "updated_at": "2026-07-31T03:13:00+00:00"
     }
   }
 }
