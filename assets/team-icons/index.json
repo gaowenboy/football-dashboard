@@ -3272,6 +3272,14 @@
       "resolved_name": "阿甲所属国家/地区",
       "source_url": "https://flagcdn.com/w160/ar.png",
       "updated_at": "2026-08-07T02:42:59+00:00"
+    },
+    "科里蒂巴": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-br.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "巴西甲所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/br.png",
+      "updated_at": "2026-08-07T02:47:29+00:00"
     }
   }
 }
