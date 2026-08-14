@@ -3336,6 +3336,22 @@
       "resolved_name": "K2联赛所属国家/地区",
       "source_url": "https://flagcdn.com/w160/kr.png",
       "updated_at": "2026-08-14T03:36:44+00:00"
+    },
+    "SJK": {
+      "kind": "crest",
+      "path": "assets/team-icons/ac0a97526db1fce1.png",
+      "source": "TheSportsDB",
+      "resolved_name": "SJK-j",
+      "source_url": "https://r2.thesportsdb.com/images/media/team/badge/rp0vdf1743652034.png",
+      "updated_at": "2026-08-14T03:50:45+00:00"
+    },
+    "科特卡": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-fi.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "芬甲所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/fi.png",
+      "updated_at": "2026-08-14T03:50:45+00:00"
     }
   }
 }
