@@ -3352,6 +3352,22 @@
       "resolved_name": "芬甲所属国家/地区",
       "source_url": "https://flagcdn.com/w160/fi.png",
       "updated_at": "2026-08-14T03:50:45+00:00"
+    },
+    "釜山偶": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-kr.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "K2联赛所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/kr.png",
+      "updated_at": "2026-08-14T03:54:46+00:00"
+    },
+    "华城F": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-kr.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "K2联赛所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/kr.png",
+      "updated_at": "2026-08-14T03:54:46+00:00"
     }
   }
 }
