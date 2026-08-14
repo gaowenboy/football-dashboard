@@ -3400,6 +3400,62 @@
       "resolved_name": "瑞典甲所属国家/地区",
       "source_url": "https://flagcdn.com/w160/se.png",
       "updated_at": "2026-08-14T04:24:49+00:00"
+    },
+    "清州": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-kr.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "K2联赛所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/kr.png",
+      "updated_at": "2026-08-14T05:12:05+00:00"
+    },
+    "全南天": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-kr.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "K2联赛所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/kr.png",
+      "updated_at": "2026-08-14T05:12:05+00:00"
+    },
+    "厄斯特": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-se.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "瑞典甲所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/se.png",
+      "updated_at": "2026-08-14T05:12:05+00:00"
+    },
+    "米亚尔": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-se.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "瑞典超所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/se.png",
+      "updated_at": "2026-08-14T05:12:05+00:00"
+    },
+    "Pk-": {
+      "kind": "crest",
+      "path": "assets/team-icons/2c3960782dd0ce4d.png",
+      "source": "TheSportsDB",
+      "resolved_name": "PKKU",
+      "source_url": "https://r2.thesportsdb.com/images/media/team/badge/p50e0z1720768236.png",
+      "updated_at": "2026-08-14T05:12:06+00:00"
+    },
+    "克鲁比": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-fi.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "芬甲所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/fi.png",
+      "updated_at": "2026-08-14T05:12:06+00:00"
+    },
+    "胡内多": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-ro.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "罗甲所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/ro.png",
+      "updated_at": "2026-08-14T05:12:06+00:00"
     }
   }
 }
