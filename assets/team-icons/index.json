@@ -3392,6 +3392,14 @@
       "resolved_name": "巴西甲所属国家/地区",
       "source_url": "https://flagcdn.com/w160/br.png",
       "updated_at": "2026-08-14T04:22:45+00:00"
+    },
+    "松兹瓦": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-se.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "瑞典甲所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/se.png",
+      "updated_at": "2026-08-14T04:24:49+00:00"
     }
   }
 }
