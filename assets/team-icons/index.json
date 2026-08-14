@@ -3456,6 +3456,14 @@
       "resolved_name": "罗甲所属国家/地区",
       "source_url": "https://flagcdn.com/w160/ro.png",
       "updated_at": "2026-08-14T05:12:06+00:00"
+    },
+    "城南一": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-kr.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "K2联赛所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/kr.png",
+      "updated_at": "2026-08-14T05:22:07+00:00"
     }
   }
 }
