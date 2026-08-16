@@ -1,12 +1,12 @@
 {
-  "build_id": "20260816111240750229",
-  "generated_at": "2026-08-16T11:12:41+08:00",
+  "build_id": "20260816111847377766",
+  "generated_at": "2026-08-16T11:18:47+08:00",
   "model_version": "V1_CHAMPION_UNIFIED_V41",
   "ruleset_version": "UNIFIED_RULESET_1.2.0_COMPAT",
-  "commit_sha": "efc22038acfcae9b0e7942c9ee944274072ae3f8",
+  "commit_sha": "cf1c3aa4e6ce65575d96bc7a94f234cf45ed85ef",
   "prediction_data_cutoff": "2026-08-15T12:25:05+08:00",
   "build_status": "ok",
   "probability_conflict_count": 0,
   "calibration_status": "cross_version_reference_available",
-  "content_fingerprint": "825f47159a60daa3d3a41066c215ba7ebd2b7facb2d566e5269b2e0de374dcde"
+  "content_fingerprint": "1def55d543d519c8bc0ee36cf7eb2a6f9cf33125d6e3b69b8b3f7e0b63fb4d5b"
 }
