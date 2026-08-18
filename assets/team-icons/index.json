@@ -3464,6 +3464,22 @@
       "resolved_name": "K2联赛所属国家/地区",
       "source_url": "https://flagcdn.com/w160/kr.png",
       "updated_at": "2026-08-14T05:22:07+00:00"
+    },
+    "拉普拉塔体操": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-ar.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "阿根廷杯所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/ar.png",
+      "updated_at": "2026-08-18T02:14:43+00:00"
+    },
+    "贝尔格拉诺": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-ar.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "阿根廷杯所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/ar.png",
+      "updated_at": "2026-08-18T02:14:43+00:00"
     }
   }
 }
