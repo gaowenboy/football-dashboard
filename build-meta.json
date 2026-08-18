@@ -1,9 +1,12 @@
 {
-  "generated_at": "2026-08-18T09:29:19.1338367+08:00",
-  "source": "local football-dashboard",
-  "review_fix": "pre-kickoff snapshots + ticket-leg fallback",
-  "review_counts": {
-    "sporttery": 29,
-    "beijing": 10
-  }
+  "build_id": "20260818092956824332",
+  "generated_at": "2026-08-18T09:29:56+08:00",
+  "model_version": "V1_CHAMPION_UNIFIED_V41",
+  "ruleset_version": "UNIFIED_RULESET_1.2.0_COMPAT",
+  "commit_sha": "b6fd0c8105ba296e632a54c325154d1a76cd7fa4",
+  "prediction_data_cutoff": "2026-08-15T11:13:15+08:00",
+  "build_status": "ok",
+  "probability_conflict_count": 0,
+  "calibration_status": "cross_version_reference_available",
+  "content_fingerprint": "bbb209957d4d8426a17eead44898de5974591a5ebb2a05dca34cdfb72e4f6236"
 }
