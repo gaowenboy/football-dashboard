@@ -1429,9 +1429,10 @@
     <h1>足球比赛预测分析表</h1>
     <p>全部待售比赛一表展示，正式方向统一采用赛前冻结概率。</p>
     <div class="refresh-bar">
-      <button class="refresh-button" id="manual-refresh" type="button">检查已发布更新</button>
+      <button class="refresh-button" id="manual-refresh" type="button">刷新最新数据/重建页面</button>
+      <button class="refresh-button" id="deep-refresh" type="button">深度样本刷新</button>
       <button class="refresh-button secondary" id="auto-refresh-toggle" type="button" aria-pressed="true">自动刷新：开</button>
-      <span class="refresh-hint" id="refresh-status">只检查已经发布的新版本，不调用本机或局域网服务。</span>
+      <span class="refresh-hint" id="refresh-status">点击后统一抓取最新体彩待售、完赛赛果、近三天复盘，并重建预测表。</span>
       <span class="auto-refresh-status" id="auto-refresh-status">自动刷新准备中...</span>
     </div>
   </header>
@@ -1449,7 +1450,7 @@
 <section id="status">
   <h2>今日状态</h2>
   <div class="status-grid">
-    <div class="metric"><span>更新时间</span><strong data-dashboard-generated>2026-08-18T10:24:36+08:00</strong></div>
+    <div class="metric"><span>更新时间</span><strong data-dashboard-generated>2026-08-18T10:24:18+08:00</strong></div>
     <div class="metric"><span>比赛待售情况</span><strong data-sale-status data-sporttery-count="0" data-beijing-count="83">体彩0场 · 北单83场 · 去重83场</strong></div>
   </div>
 </section>
@@ -1550,52 +1551,490 @@
   </main>
 
   <script>
-    let currentBuildId = document.querySelector('meta[name="dashboard-build-id"]')?.content || '';
-    const statusNode = document.getElementById('refresh-status');
-    const autoToggleNode = document.getElementById('auto-refresh-toggle');
-    const autoStatusNode = document.getElementById('auto-refresh-status');
-    const publicAutoUpdateKey = 'football-dashboard-public-auto-update';
-    const publicAutoUpdateIntervalMs = 60000;
+    const teamCn = {
+      'South Africa': '南非',
+      'Canada': '加拿大',
+      'Brazil': '巴西',
+      'Japan': '日本',
+      'Germany': '德国',
+      'Paraguay': '巴拉圭',
+      'Netherlands': '荷兰',
+      'Morocco': '摩洛哥',
+      'Ivory Coast': '科特迪瓦',
+      'Norway': '挪威',
+      'France': '法国',
+      'Sweden': '瑞典',
+      'Mexico': '墨西哥',
+      'Ecuador': '厄瓜多尔',
+      'England': '英格兰',
+      'Congo DR': '刚果（金）',
+      'Belgium': '比利时',
+      'Senegal': '塞内加尔',
+      'United States': '美国',
+      'Bosnia-Herzegovina': '波黑',
+      'Croatia': '克罗地亚',
+      'Ghana': '加纳',
+      'Panama': '巴拿马',
+      'Colombia': '哥伦比亚',
+      'Portugal': '葡萄牙',
+      'Uzbekistan': '乌兹别克斯坦',
+      'Algeria': '阿尔及利亚',
+      'Austria': '奥地利',
+      'Jordan': '约旦',
+      'Argentina': '阿根廷',
+    };
 
-    function publicAutoUpdateEnabled() {
+    function bjDateToken(offsetDays) {
+      const d = new Date();
+      d.setUTCDate(d.getUTCDate() + offsetDays);
+      return d.toISOString().slice(0, 10).replaceAll('-', '');
+    }
+
+    function cnName(name) {
+      return teamCn[name] || name || '';
+    }
+
+    function resultLabel(score) {
+      const parts = String(score || '').split('-').map((v) => Number(v.trim()));
+      if (parts.length !== 2 || Number.isNaN(parts[0]) || Number.isNaN(parts[1])) return '赛果待刷新';
+      if (parts[0] > parts[1]) return '主胜';
+      if (parts[0] < parts[1]) return '客胜';
+      return '平';
+    }
+
+    function completedRow(event) {
+      const comp = event.competitions?.[0]?.competitors || [];
+      const home = comp.find((item) => item.homeAway === 'home') || {};
+      const away = comp.find((item) => item.homeAway === 'away') || {};
+      const homeName = cnName(home.team?.displayName);
+      const awayName = cnName(away.team?.displayName);
+      const kickoff = new Date(event.date);
+      const bj = new Date(kickoff.getTime() + 8 * 60 * 60 * 1000).toISOString().slice(0, 16).replace('T', ' ');
+      const score = `${home.score ?? ''}-${away.score ?? ''}`;
+      return { time: bj, match: `${homeName} vs ${awayName}`, score, result: resultLabel(score) };
+    }
+
+    function renderCompleted(rows) {
+      const target = document.getElementById('live-refresh-results');
+      if (!target) return;
+      if (!rows.length) {
+        target.innerHTML = '<div class="note">暂未读取到近三天已结束且有赛前预测快照的比赛。</div>';
+        return;
+      }
+      const body = rows.map((row) => `<tr><td>${row.time}</td><td>${row.match}</td><td>${row.score}</td><td>${row.result}</td><td>浏览器实时刷新已读取赛果；赛前方向偏差将在下次模型生成时补齐</td><td>让球/双选复盘待模型读取赛前快照后计算</td><td>比分区间已记录</td><td>先写入完赛复盘区，后续用于校准平局、让平/让负和比分偏大/偏小风险</td></tr>`).join('');
+      target.innerHTML = `<div class="table-wrap"><table><thead><tr><th>北京时间</th><th>比赛</th><th>实际比分</th><th>普通结果</th><th>赛前方向复盘</th><th>让球/双选复盘</th><th>比分偏差</th><th>今日权重修正</th></tr></thead><tbody>${body}</tbody></table></div>`;
+    }
+
+    const DASHBOARD_REFRESH_ORIGINS = [window.location.origin];
+
+    function uniqueRefreshOrigins() {
+      const seen = new Set();
+      return DASHBOARD_REFRESH_ORIGINS
+        .filter(Boolean)
+        .map((origin) => String(origin).replace(/\/$/, ''))
+        .filter((origin) => {
+          if (seen.has(origin)) return false;
+          seen.add(origin);
+          return true;
+        });
+    }
+
+    function refreshApiUrl(origin, full = false, resultsOnly = false) {
+      const query = new URLSearchParams();
+      if (full) query.set('full', '1');
+      else if (resultsOnly) query.set('results', '1');
+      // Explicitly marks a user click. Old auto-refresh pages do not include
+      // this marker and are redirected to the current build by the backend.
+      query.set('manual', '1');
+      return `${origin}/api/refresh?${query.toString()}`;
+    }
+
+    function isLocalDashboardOrigin(origin = window.location.origin) {
       try {
-        return localStorage.getItem(publicAutoUpdateKey) !== '0';
+        const url = new URL(origin);
+        return url.protocol === 'http:' && url.port === '8765';
+      } catch (_) {
+        return false;
+      }
+    }
+
+    function localRefreshEntry(full = false, includeReturn = true, origin = window.location.origin) {
+      const params = new URLSearchParams();
+      params.set('auto_refresh', '1');
+      if (full) params.set('full', '1');
+      if (includeReturn && !isLocalDashboardOrigin()) {
+        params.set('return_to', window.location.href);
+      }
+      return `${origin}/?${params.toString()}`;
+    }
+
+    function localRefreshEntryLinks(full = false) {
+      return [localRefreshEntry(full, true, window.location.origin)];
+    }
+
+    function refreshReturnTarget(buildId = '') {
+      const params = new URLSearchParams(window.location.search);
+      const returnTo = params.get('return_to');
+      if (returnTo) {
+        try {
+          const target = new URL(returnTo);
+          target.searchParams.set('t', Date.now());
+          if (buildId) target.searchParams.set('build', buildId);
+          return target.toString();
+        } catch (_) {
+          // Fall through to the current page if the return URL is malformed.
+        }
+      }
+      const current = new URL(window.location.href);
+      current.searchParams.delete('auto_refresh');
+      current.searchParams.delete('full');
+      current.searchParams.delete('return_to');
+      current.searchParams.set('t', Date.now());
+      if (buildId) current.searchParams.set('build', buildId);
+      return `${current.pathname}${current.search}${current.hash || window.location.hash || ''}`;
+    }
+
+    function refreshReloadDelayMs() {
+      const params = new URLSearchParams(window.location.search);
+      const returnTo = params.get('return_to') || '';
+      if (returnTo.includes('github.io')) return 1200;
+      if (returnTo) return 2500;
+      return 900;
+    }
+
+    function publishedPageRefreshTarget() {
+      const current = new URL(window.location.href);
+      current.searchParams.delete('auto_refresh');
+      current.searchParams.delete('full');
+      current.searchParams.delete('return_to');
+      current.searchParams.set('t', Date.now());
+      return current.toString();
+    }
+
+    async function callRefreshApi(url) {
+      const sep = url.includes('?') ? '&' : '?';
+      const res = await fetch(`${url}${sep}_=${Date.now()}`, {
+        method: 'POST',
+        cache: 'no-store',
+        mode: 'cors'
+      });
+      const payload = await res.json().catch(() => ({}));
+      if (!res.ok || !payload.ok) {
+        const err = new Error(payload.message || `HTTP ${res.status}`);
+        err.status = res.status;
+        err.payload = payload;
+        throw err;
+      }
+      return payload;
+    }
+
+    async function refreshWithFallback(full = false, resultsOnly = false) {
+      if (!isLocalDashboardOrigin()) {
+        const err = new Error('当前为静态发布页，只能重载已经发布的数据；数据抓取接口未配置。');
+        throw err;
+      }
+      const errors = [];
+      for (const origin of uniqueRefreshOrigins()) {
+        const url = refreshApiUrl(origin, full, resultsOnly);
+        try {
+          return await callRefreshApi(url);
+        } catch (err) {
+          errors.push(`POST ${url}: ${err?.message || err}`);
+          if (Number(err?.status || 0) === 409 || String(err?.message || '').includes('正在执行')) {
+            throw err;
+          }
+        }
+      }
+      const err = new Error(errors.slice(-4).join('；') || '本地刷新接口不可用');
+      err.localEntry = localRefreshEntry(full);
+      throw err;
+    }
+
+    async function performDashboardRefresh(full = false, buttonId = '', source = 'manual') {
+      const status = document.getElementById('refresh-status');
+      const button = document.getElementById(buttonId);
+      if (!isLocalDashboardOrigin()) {
+        if (status) {
+          status.textContent = '当前为静态发布页，正在检查已发布的最新版本；不会请求或跳转到开发机。';
+        }
+        rememberScrollPosition();
+        setTimeout(() => {
+          window.location.replace(publishedPageRefreshTarget());
+        }, 250);
+        return;
+      }
+      if (status) status.textContent = full
+        ? '正在深度刷新历史样本、赔率库、完赛复盘并重建页面，时间会更久...'
+        : source === 'auto'
+          ? '自动刷新正在抓取最新体彩待售、完赛复盘并重建页面...'
+          : '正在抓取最新体彩待售、完赛复盘并重建页面...';
+      if (button) button.disabled = true;
+      try {
+        // A normal refresh only needs live sale feeds and verified results.
+        // Keep deep historical/model rebuilds off the normal browser path so
+        // the service can settle completed matches without a long lock.
+        const payload = await refreshWithFallback(full, !full);
+        const publish = payload.publish || {};
+        const target = refreshReturnTarget(publish.build_id || '');
+        if (status) {
+          if (publish.ok && publish.external_visible === false) {
+            status.innerHTML = `${payload.message} 体彩待售 ${payload.sporttery_count || '-'}，北单待售 ${payload.beijing_count || '-'}。外网页面已推送但还没完成部署，先不要跳回旧页面；稍后打开：<a href="${target}">外网最新版</a>`;
+            return;
+          }
+          status.textContent = `${payload.message} 体彩待售 ${payload.sporttery_count || '-'}，北单待售 ${payload.beijing_count || '-'}，即将刷新页面。`;
+        }
+        window.dispatchEvent(new CustomEvent('dashboard-refresh-finished', { detail: { ok: true, source } }));
+        setTimeout(() => {
+          storageSetNumber(autoRefreshNextStorageKey, Date.now() + autoRefreshIntervalMs);
+          rememberScrollPosition();
+          window.location.replace(target);
+        }, refreshReloadDelayMs());
+        return payload;
+      } catch (err) {
+        const message = err?.message || err;
+        if (status) {
+          if (String(message).includes('正在执行')) {
+            status.textContent = `刷新正在执行：${message}。稍后再点刷新即可。`;
+          } else if (isLocalDashboardOrigin()) {
+            status.textContent = `刷新失败：${message}。本机服务已连接，但刷新脚本执行失败，请查看错误信息后再试。`;
+          } else {
+            status.textContent = `静态发布页没有配置数据抓取接口：${message}`;
+          }
+        }
+        window.dispatchEvent(new CustomEvent('dashboard-refresh-finished', { detail: { ok: false, source, message: String(message) } }));
+        throw err;
+      } finally {
+        if (button) button.disabled = false;
+      }
+    }
+
+    function bindRefreshButton(buttonId, full = false) {
+      document.getElementById(buttonId)?.addEventListener('click', async () => {
+        try {
+          await performDashboardRefresh(full, buttonId, 'manual');
+        } catch (_) {
+          // performDashboardRefresh already writes the visible error into the page.
+        }
+      });
+    }
+
+    function runAutoRefreshFromQuery() {
+      const params = new URLSearchParams(window.location.search);
+      if (params.get('auto_refresh') !== '1') return;
+      // Query-driven refresh was used by legacy tabs. It is intentionally a
+      // no-op now: the backend polls data and this tab simply loads its build.
+      window.history.replaceState(null, '', refreshReturnTarget());
+    }
+
+    // Polling must stay aligned with the backend result collector. Ten minutes
+    // left verified finished matches stale in an already-open browser tab.
+    const autoRefreshIntervalMs = 60 * 1000;
+    const autoRefreshFirstDelayMs = 15 * 1000;
+    let pageBuildId = document.querySelector('meta[name="dashboard-build-id"]')?.content || '';
+    const autoRefreshStorageKey = 'football-dashboard-auto-refresh';
+    const autoRefreshNextStorageKey = 'football-dashboard-auto-refresh-next-at';
+    const autoRefreshScrollStorageKey = 'football-dashboard-scroll-restore';
+    const autoRefreshActivityIdleMs = 90 * 1000;
+    let autoRefreshTimer = null;
+    let autoRefreshTicker = null;
+    let autoRefreshNextAt = 0;
+    let autoRefreshBusy = false;
+    let lastUserActivityAt = Date.now();
+
+    function autoRefreshEnabled() {
+      try {
+        return window.localStorage.getItem(autoRefreshStorageKey) !== 'off';
       } catch (_) {
         return true;
       }
     }
 
-    function setPublicAutoUpdateEnabled(enabled) {
+    function setAutoRefreshEnabled(enabled) {
       try {
-        localStorage.setItem(publicAutoUpdateKey, enabled ? '1' : '0');
-      } catch (_) {}
-      renderPublicAutoUpdateState();
-    }
-
-    function renderPublicAutoUpdateState(extra = '') {
-      const enabled = publicAutoUpdateEnabled();
-      if (autoToggleNode) {
-        autoToggleNode.textContent = enabled ? '自动更新：开' : '自动更新：关';
-        autoToggleNode.setAttribute('aria-pressed', enabled ? 'true' : 'false');
-        autoToggleNode.classList.toggle('is-off', !enabled);
-      }
-      if (autoStatusNode) {
-        autoStatusNode.textContent = extra || (enabled ? '每1分钟自动同步已发布新版本' : '自动检查已暂停');
+        window.localStorage.setItem(autoRefreshStorageKey, enabled ? 'on' : 'off');
+      } catch (_) {
+        // localStorage can be unavailable in hardened browsers; keep the in-page state best-effort.
       }
     }
 
-    function rememberScroll() {
-      sessionStorage.setItem('football-dashboard-public-scroll', JSON.stringify({y: window.scrollY || 0, at: Date.now()}));
+    function storageGetNumber(key, fallback = 0) {
+      try {
+        const value = Number(window.localStorage.getItem(key));
+        return Number.isFinite(value) ? value : fallback;
+      } catch (_) {
+        return fallback;
+      }
     }
 
-    function restoreScroll() {
+    function storageSetNumber(key, value) {
       try {
-        const saved = JSON.parse(sessionStorage.getItem('football-dashboard-public-scroll') || 'null');
-        sessionStorage.removeItem('football-dashboard-public-scroll');
-        if (saved && Date.now() - Number(saved.at || 0) < 300000) {
-          setTimeout(() => window.scrollTo(0, Number(saved.y || 0)), 80);
+        window.localStorage.setItem(key, String(value));
+      } catch (_) {
+        // Best-effort only.
+      }
+    }
+
+    function rememberScrollPosition() {
+      try {
+        window.sessionStorage.setItem(autoRefreshScrollStorageKey, JSON.stringify({
+          href: window.location.pathname,
+          hash: window.location.hash,
+          x: window.scrollX || 0,
+          y: window.scrollY || 0,
+          at: Date.now()
+        }));
+      } catch (_) {
+        // Best-effort only.
+      }
+    }
+
+    function restoreScrollPosition() {
+      try {
+        const raw = window.sessionStorage.getItem(autoRefreshScrollStorageKey);
+        if (!raw) return;
+        const saved = JSON.parse(raw);
+        window.sessionStorage.removeItem(autoRefreshScrollStorageKey);
+        if (!saved || saved.href !== window.location.pathname || Date.now() - Number(saved.at || 0) > 5 * 60 * 1000) return;
+        setTimeout(() => window.scrollTo(Number(saved.x || 0), Number(saved.y || 0)), 80);
+      } catch (_) {
+        // Best-effort only.
+      }
+    }
+
+    function formatRefreshCountdown(ms) {
+      const safeMs = Math.max(0, ms);
+      const totalSeconds = Math.ceil(safeMs / 1000);
+      const minutes = Math.floor(totalSeconds / 60);
+      const seconds = totalSeconds % 60;
+      return `${minutes}:${String(seconds).padStart(2, '0')}`;
+    }
+
+    function updateAutoRefreshUi(extra = '') {
+      const enabled = autoRefreshEnabled();
+      const toggle = document.getElementById('auto-refresh-toggle');
+      const status = document.getElementById('auto-refresh-status');
+      if (toggle) {
+        toggle.textContent = enabled ? '自动刷新：开' : '自动刷新：关';
+        toggle.setAttribute('aria-pressed', enabled ? 'true' : 'false');
+        toggle.classList.toggle('is-off', !enabled);
+      }
+      if (!status) return;
+      if (!enabled) {
+        status.textContent = extra || '自动刷新已关闭。';
+        return;
+      }
+      const countdown = autoRefreshNextAt ? formatRefreshCountdown(autoRefreshNextAt - Date.now()) : '--:--';
+      if (!isLocalDashboardOrigin()) {
+        status.textContent = extra || `外网页面不会跳内网；每分钟检查已发布页面，下次检查 ${countdown}。`;
+        return;
+      }
+      status.textContent = extra || `后台每2分钟抓取；本页每分钟检查更新，下次检查 ${countdown}。`;
+    }
+
+    function clearAutoRefreshTimers() {
+      if (autoRefreshTimer) window.clearTimeout(autoRefreshTimer);
+      if (autoRefreshTicker) window.clearInterval(autoRefreshTicker);
+      autoRefreshTimer = null;
+      autoRefreshTicker = null;
+    }
+
+    function scheduleAutoRefresh(delayMs = autoRefreshIntervalMs) {
+      clearAutoRefreshTimers();
+      if (!autoRefreshEnabled()) {
+        updateAutoRefreshUi();
+        return;
+      }
+      autoRefreshNextAt = Date.now() + Math.max(15 * 1000, delayMs);
+      storageSetNumber(autoRefreshNextStorageKey, autoRefreshNextAt);
+      updateAutoRefreshUi();
+      autoRefreshTicker = window.setInterval(() => updateAutoRefreshUi(), 1000);
+      autoRefreshTimer = window.setTimeout(triggerAutoRefresh, Math.max(15 * 1000, delayMs));
+    }
+
+    function scheduleInitialAutoRefresh() {
+      const storedNextAt = storageGetNumber(autoRefreshNextStorageKey, 0);
+      const now = Date.now();
+      let delayMs = autoRefreshFirstDelayMs;
+      if (storedNextAt > now && storedNextAt - now <= autoRefreshIntervalMs) {
+        delayMs = storedNextAt - now;
+      } else if (storedNextAt > 0 && now - storedNextAt < autoRefreshIntervalMs) {
+        delayMs = autoRefreshIntervalMs - (now - storedNextAt);
+      }
+      scheduleAutoRefresh(Math.max(15 * 1000, delayMs));
+    }
+
+    function userRecentlyActive() {
+      return Date.now() - lastUserActivityAt < autoRefreshActivityIdleMs;
+    }
+
+    async function checkLocalBuildUpdate() {
+      const response = await fetch(`build-meta.json?_=${Date.now()}`, { cache: 'no-store' });
+      if (!response.ok) throw new Error(`build metadata HTTP ${response.status}`);
+      const meta = await response.json();
+      if (!meta.build_id || meta.build_id === pageBuildId) return false;
+      rememberScrollPosition();
+      window.location.replace(refreshReturnTarget(meta.build_id));
+      return true;
+    }
+
+    async function triggerAutoRefresh() {
+      if (!autoRefreshEnabled()) {
+        updateAutoRefreshUi();
+        return;
+      }
+      if (autoRefreshBusy) {
+        scheduleAutoRefresh(2 * 60 * 1000);
+        updateAutoRefreshUi('刷新任务仍在执行，2分钟后再检查。');
+        return;
+      }
+      if (userRecentlyActive() && window.scrollY > 80) {
+        scheduleAutoRefresh(60 * 1000);
+        updateAutoRefreshUi('你正在浏览页面，自动刷新已延后3分钟，避免打断当前位置。');
+        return;
+      }
+      if (!isLocalDashboardOrigin()) {
+        updateAutoRefreshUi('外网页面自动重载已发布版本，不调用内网刷新入口。');
+        storageSetNumber(autoRefreshNextStorageKey, Date.now() + autoRefreshIntervalMs);
+        rememberScrollPosition();
+        window.location.replace(publishedPageRefreshTarget());
+        return;
+      }
+      autoRefreshBusy = true;
+      updateAutoRefreshUi('正在自动刷新最新赛果和待售场次...');
+      try {
+        const changed = await checkLocalBuildUpdate();
+        if (!changed) scheduleAutoRefresh(autoRefreshIntervalMs);
+      } catch (_) {
+        scheduleAutoRefresh(60 * 1000);
+      } finally {
+        autoRefreshBusy = false;
+      }
+    }
+
+    function bindAutoRefreshControls() {
+      const toggle = document.getElementById('auto-refresh-toggle');
+      toggle?.addEventListener('click', () => {
+        const next = !autoRefreshEnabled();
+        setAutoRefreshEnabled(next);
+        if (next) {
+          scheduleAutoRefresh(10 * 1000);
+        } else {
+          clearAutoRefreshTimers();
+          updateAutoRefreshUi();
         }
-      } catch (_) {}
+      });
+      document.addEventListener('visibilitychange', () => {
+        if (document.visibilityState === 'visible' && autoRefreshEnabled() && autoRefreshNextAt < Date.now()) {
+          scheduleAutoRefresh(60 * 1000);
+        }
+      });
+      ['scroll', 'click', 'keydown', 'touchstart', 'mousemove'].forEach((eventName) => {
+        window.addEventListener(eventName, () => {
+          lastUserActivityAt = Date.now();
+        }, { passive: true });
+      });
+      restoreScrollPosition();
+      scheduleInitialAutoRefresh();
     }
 
     function bindMatchAnalysisToggles() {
@@ -1620,88 +2059,11 @@
       });
     }
 
-    function expandedAnalysisPanels() {
-      return Array.from(document.querySelectorAll('.match-analysis-toggle[aria-expanded="true"]'))
-        .map((button) => button.getAttribute('aria-controls'))
-        .filter(Boolean);
-    }
-
-    function restoreExpandedAnalysisPanels(panelIds) {
-      panelIds.forEach((panelId) => {
-        const panel = document.getElementById(panelId);
-        const button = document.querySelector(`.match-analysis-toggle[aria-controls="${CSS.escape(panelId)}"]`);
-        if (!panel || !button) return;
-        panel.hidden = false;
-        button.setAttribute('aria-expanded', 'true');
-        button.closest('.prediction-main-row')?.classList.add('analysis-open');
-        const label = button.querySelector('.analysis-toggle-label');
-        if (label) label.textContent = '收起分析';
-      });
-    }
-
-    async function applyPublishedBuild(meta) {
-      const response = await fetch(`index.html?build=${encodeURIComponent(meta.build_id)}&_=${Date.now()}`, {
-        cache: 'no-store',
-      });
-      if (!response.ok) throw new Error(`页面 HTTP ${response.status}`);
-      const parsed = new DOMParser().parseFromString(await response.text(), 'text/html');
-      const freshMain = parsed.querySelector('main');
-      const currentMain = document.querySelector('main');
-      if (!freshMain || !currentMain) throw new Error('发布页面缺少主内容');
-
-      const scrollY = window.scrollY || 0;
-      const expandedPanels = expandedAnalysisPanels();
-      currentMain.replaceWith(document.importNode(freshMain, true));
-      restoreExpandedAnalysisPanels(expandedPanels);
-
-      const buildMeta = document.querySelector('meta[name="dashboard-build-id"]');
-      if (buildMeta) buildMeta.content = meta.build_id;
-      currentBuildId = meta.build_id;
-      const target = new URL(window.location.href);
-      target.searchParams.set('build', meta.build_id);
-      history.replaceState(null, '', target.toString());
-      requestAnimationFrame(() => window.scrollTo(0, scrollY));
-    }
-
-    async function checkPublishedBuild(manual = false) {
-      if (manual && statusNode) statusNode.textContent = '正在检查已发布更新...';
-      if (autoStatusNode) autoStatusNode.textContent = manual ? '正在手动检查...' : '正在自动检查...';
-      try {
-        const response = await fetch(`build-meta.json?_=${Date.now()}`, {cache: 'no-store'});
-        if (!response.ok) throw new Error(`HTTP ${response.status}`);
-        const meta = await response.json();
-        if (meta.build_status === 'degraded' && statusNode) {
-          statusNode.textContent = '新构建存在概率冲突或校准数据问题，已发布但请查看状态明细。';
-        }
-        if (meta.build_id && meta.build_id !== currentBuildId) {
-          await applyPublishedBuild(meta);
-          if (statusNode) statusNode.textContent = `已同步最新待售与赛果（${meta.build_id}）。`;
-          if (autoStatusNode) autoStatusNode.textContent = `最近同步：${new Date().toLocaleTimeString('zh-CN', {hour12: false})}`;
-          return;
-        }
-        if (statusNode) statusNode.textContent = '当前已是最新发布版本。';
-        if (autoStatusNode) autoStatusNode.textContent = `最近检查：${new Date().toLocaleTimeString('zh-CN', {hour12: false})}`;
-      } catch (error) {
-        if (statusNode) statusNode.textContent = `检查发布版本失败：${error.message || error}`;
-        if (autoStatusNode) autoStatusNode.textContent = '自动检查失败，1分钟后重试';
-      }
-    }
-
-    document.getElementById('manual-refresh')?.addEventListener('click', () => checkPublishedBuild(true));
-    autoToggleNode?.addEventListener('click', () => {
-      const enabled = !publicAutoUpdateEnabled();
-      setPublicAutoUpdateEnabled(enabled);
-      if (enabled) checkPublishedBuild(false);
-    });
-    restoreScroll();
-    renderPublicAutoUpdateState();
+    bindRefreshButton('manual-refresh', false);
+    bindRefreshButton('deep-refresh', true);
+    runAutoRefreshFromQuery();
+    bindAutoRefreshControls();
     bindMatchAnalysisToggles();
-    window.setTimeout(() => {
-      if (publicAutoUpdateEnabled()) checkPublishedBuild(false);
-    }, 10000);
-    window.setInterval(() => {
-      if (publicAutoUpdateEnabled()) checkPublishedBuild(false);
-    }, publicAutoUpdateIntervalMs);
   </script>
 </body>
 </html>
