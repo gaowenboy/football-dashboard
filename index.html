@@ -1416,14 +1416,14 @@
       .system-info-grid { grid-template-columns: 1fr; }
     }
   </style>
-<meta name="dashboard-build-id" content="20260823165259987804">
-  <meta name="dashboard-generated-at" content="2026-08-23T16:53:00+08:00">
+<meta name="dashboard-build-id" content="20260823172221357416">
+  <meta name="dashboard-generated-at" content="2026-08-23T17:22:21+08:00">
   <meta name="dashboard-model-version" content="V1_CHAMPION_UNIFIED_V41">
   <meta name="dashboard-ruleset-version" content="UNIFIED_RULESET_1.2.0_COMPAT">
   <meta name="dashboard-build-status" content="ok">
   <meta name="dashboard-probability-conflict-count" content="0">
   <meta name="dashboard-calibration-status" content="cross_version_reference_available">
-  <meta name="dashboard-refresh-engine" content="3">
+  <meta name="dashboard-refresh-engine" content="4">
 </head>
 <body>
   <header>
@@ -1431,7 +1431,7 @@
     <p>全部待售比赛一表展示，正式方向统一采用赛前冻结概率。</p>
     <div class="refresh-bar">
       <button class="refresh-button" id="manual-refresh" type="button">检查已发布更新</button>
-      <button class="refresh-button secondary" id="auto-refresh-toggle" type="button" aria-pressed="true">自动刷新：开</button>
+      <button class="refresh-button secondary" id="auto-refresh-toggle" type="button" aria-pressed="true" disabled>自动刷新：开</button>
       <span class="refresh-hint" id="refresh-status">只检查已经发布的新版本，不调用本机或局域网服务。</span>
       <span class="auto-refresh-status" id="auto-refresh-status">自动刷新准备中...</span>
     </div>
@@ -1450,7 +1450,7 @@
 <section id="status">
   <h2>今日状态</h2>
   <div class="status-grid">
-    <div class="metric"><span>更新时间</span><strong data-dashboard-generated>2026-08-23T16:53:00+08:00</strong></div>
+    <div class="metric"><span>更新时间</span><strong data-dashboard-generated>2026-08-23T17:22:21+08:00</strong></div>
     <div class="metric"><span>比赛待售情况</span><strong data-sale-status data-sporttery-count="38" data-beijing-count="124">体彩38场 · 北单124场 · 去重128场</strong></div>
   </div>
 </section>
@@ -1555,33 +1555,21 @@
     const statusNode = document.getElementById('refresh-status');
     const autoToggleNode = document.getElementById('auto-refresh-toggle');
     const autoStatusNode = document.getElementById('auto-refresh-status');
-    const publicAutoUpdateKey = 'football-dashboard-public-auto-update';
-    const publicAutoUpdateIntervalMs = 60000;
+    const publicAutoUpdateIntervalMs = 30000;
 
     function publicAutoUpdateEnabled() {
-      try {
-        return localStorage.getItem(publicAutoUpdateKey) !== '0';
-      } catch (_) {
-        return true;
-      }
-    }
-
-    function setPublicAutoUpdateEnabled(enabled) {
-      try {
-        localStorage.setItem(publicAutoUpdateKey, enabled ? '1' : '0');
-      } catch (_) {}
-      renderPublicAutoUpdateState();
+      return true;
     }
 
     function renderPublicAutoUpdateState(extra = '') {
-      const enabled = publicAutoUpdateEnabled();
       if (autoToggleNode) {
-        autoToggleNode.textContent = enabled ? '自动更新：开' : '自动更新：关';
-        autoToggleNode.setAttribute('aria-pressed', enabled ? 'true' : 'false');
-        autoToggleNode.classList.toggle('is-off', !enabled);
+        autoToggleNode.textContent = '自动同步：开';
+        autoToggleNode.setAttribute('aria-pressed', 'true');
+        autoToggleNode.classList.remove('is-off');
+        autoToggleNode.disabled = true;
       }
       if (autoStatusNode) {
-        autoStatusNode.textContent = extra || (enabled ? '每1分钟自动同步已发布新版本' : '自动检查已暂停');
+        autoStatusNode.textContent = extra || '每30秒自动同步已发布新版本';
       }
     }
 
@@ -1684,22 +1672,17 @@
         if (autoStatusNode) autoStatusNode.textContent = `最近检查：${new Date().toLocaleTimeString('zh-CN', {hour12: false})}`;
       } catch (error) {
         if (statusNode) statusNode.textContent = `检查发布版本失败：${error.message || error}`;
-        if (autoStatusNode) autoStatusNode.textContent = '自动检查失败，1分钟后重试';
+        if (autoStatusNode) autoStatusNode.textContent = '自动检查失败，30秒后重试';
       }
     }
 
     document.getElementById('manual-refresh')?.addEventListener('click', () => checkPublishedBuild(true));
-    autoToggleNode?.addEventListener('click', () => {
-      const enabled = !publicAutoUpdateEnabled();
-      setPublicAutoUpdateEnabled(enabled);
-      if (enabled) checkPublishedBuild(false);
-    });
     restoreScroll();
     renderPublicAutoUpdateState();
     bindMatchAnalysisToggles();
     window.setTimeout(() => {
       if (publicAutoUpdateEnabled()) checkPublishedBuild(false);
-    }, 10000);
+    }, 3000);
     window.setInterval(() => {
       if (publicAutoUpdateEnabled()) checkPublishedBuild(false);
     }, publicAutoUpdateIntervalMs);
