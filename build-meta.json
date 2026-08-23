@@ -1,12 +1,12 @@
 {
-  "build_id": "20260824032220652598",
-  "generated_at": "2026-08-24T03:22:20+08:00",
+  "build_id": "20260824033220672080",
+  "generated_at": "2026-08-24T03:32:20+08:00",
   "model_version": "V42_BJDC_DIRECT_COMPONENTS_V2",
   "ruleset_version": "UNIFIED_RULESET_1.3.0_V42_DIRECT",
-  "commit_sha": "e08882d29cbd1bf3f2c076d56f9d327913313ffb",
+  "commit_sha": "52e6894df06252000d93f7697df5a8018b5da345",
   "prediction_data_cutoff": "2026-08-24T03:21:14+08:00",
   "build_status": "ok",
   "probability_conflict_count": 0,
   "calibration_status": "historical_data_insufficient",
-  "content_fingerprint": "4323ae5604dad9eca4afc1b955451d6dee5a117b46945405561ae50821cb11a2"
+  "content_fingerprint": "d74268c0bf51b330b4a7e68be500109857ed34001d2e3efffc277b228e89a2c6"
 }
