@@ -3480,6 +3480,46 @@
       "resolved_name": "阿根廷杯所属国家/地区",
       "source_url": "https://flagcdn.com/w160/ar.png",
       "updated_at": "2026-08-18T02:14:43+00:00"
+    },
+    "里瓦达维亚独立": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-ar.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "阿根廷杯所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/ar.png",
+      "updated_at": "2026-08-25T04:26:17+00:00"
+    },
+    "拉普拉塔大学生": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-ar.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "阿根廷杯所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/ar.png",
+      "updated_at": "2026-08-25T04:26:17+00:00"
+    },
+    "巴拉卡斯中央": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-ar.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "阿根廷杯所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/ar.png",
+      "updated_at": "2026-08-25T04:26:17+00:00"
+    },
+    "普拉腾斯": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-ar.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "阿根廷杯所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/ar.png",
+      "updated_at": "2026-08-25T04:26:17+00:00"
+    },
+    "科尔多瓦学院": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-ar.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "阿根廷杯所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/ar.png",
+      "updated_at": "2026-08-25T04:26:17+00:00"
     }
   }
 }
