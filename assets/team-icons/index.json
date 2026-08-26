@@ -3520,6 +3520,22 @@
       "resolved_name": "阿根廷杯所属国家/地区",
       "source_url": "https://flagcdn.com/w160/ar.png",
       "updated_at": "2026-08-25T04:26:17+00:00"
+    },
+    "海于格": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-no.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "挪甲所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/no.png",
+      "updated_at": "2026-08-26T16:06:09+00:00"
+    },
+    "普拉腾": {
+      "kind": "flag",
+      "path": "assets/team-icons/flag-ar.png",
+      "source": "LeagueCountryFlag",
+      "resolved_name": "阿根廷杯所属国家/地区",
+      "source_url": "https://flagcdn.com/w160/ar.png",
+      "updated_at": "2026-08-26T16:06:09+00:00"
     }
   }
 }
